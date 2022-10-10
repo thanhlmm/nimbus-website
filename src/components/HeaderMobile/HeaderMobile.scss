@@ -8,7 +8,7 @@
   z-index: 9998;
   height: 100vh;
   width: 100%;
-  background-color: rgba(19, 22, 32, 0.3);
+  background-color: rgba(39, 50, 111, 0.2);
   backdrop-filter: blur(12px);
 
   transition-property: all;
@@ -46,15 +46,15 @@
       font-size: var(--qwik-fs-lg);
       line-height: var(--qwik-lh-lg);
       font-weight: var(--qwik-fw-medium);
-      color: var(--qwik-primary-50);
-      border-bottom: 0.5px solid var(--qwik-primary-50);
+      color: var(--qwik-main-color);
+      border-bottom: 0.5px solid var(--qwik-main-color);
       margin: 0 32px;
       padding-bottom: 16px;
       cursor: pointer;
       transition: all 0.3s ease-out;
 
       &:hover {
-        color: var(--qwik-main-color);
+        color: var(--qwik-white);
       }
 
       &:last-child {

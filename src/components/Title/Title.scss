@@ -1,0 +1,33 @@
+.title {
+  font-weight: var(--qwik-fw-bold);
+  font-size: 56px;
+  line-height: 67.2px;
+  color: var(--qwik-main-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 46px;
+    line-height: 57.2px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 34px;
+    line-height: 47.2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 39px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .title {
+    font-size: 34px;
+    line-height: 44.2px;
+  }
+}
