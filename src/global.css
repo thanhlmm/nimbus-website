@@ -1,3 +1,74 @@
+:root {
+  --qwik-max-width: 1140px;
+  --qwik-section-width: 90%;
+
+  --qwik-big-laptop: 2560px;
+  --qwik-laptop: 1440px;
+  --qwik-big-tablet: 1024px;
+  --qwik-tablet: 900px;
+  --qwik-mobile: 500px;
+  --qwik-small-mobile: 390px;
+
+  --qwik-main-color: #27326F;
+  --qwik-linear-main-color: linear-gradient(90deg, #5e6fd1  0%, #27326F 100%);
+  --qwik-white: #fff;
+  --qwik-black: #1E1C1C;
+
+  --qwik-primary-50: #fff9ec;
+  --qwik-primary-900: #6b5219;
+
+  --qwik-orange: #f97316;
+
+  --qwik-gray-3: #828282;
+  --qwik-gray-5: #E0E0E0;
+
+  --qwik-neutral-50: #e8e9ec;
+  --qwik-neutral-100: #b9bcc5;
+  --qwik-neutral-200: #979ca9;
+  --qwik-neutral-300: #676e81;
+  --qwik-neutral-400: #495269;
+  --qwik-neutral-500: #1c2743;
+  --qwik-neutral-700: #141c30;
+  --qwik-neutral-800: #0f1525;
+
+  --qwik-fw-light: 300;
+  --qwik-fw-regular: 400;
+  --qwik-fw-medium: 500;
+  --qwik-fw-semibold: 600;
+  --qwik-fw-bold: 700;
+
+  --qwik-fs-xs: 0.75rem;
+  --qwik-lh-xs: 1.167;
+
+  --qwik-fs-sm: 0.875rem; 
+  --qwik-lh-sm: 1.55;
+
+  --qwik-fs-base: 1rem; 
+  --qwik-lh-base: 1.5;
+
+  --qwik-fs-lg: 1.125rem; 
+  --qwik-lh-lg: 1.333;
+
+  --qwik-fs-xl: 1.25rem; 
+  --qwik-lh-xl: 1.2;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
