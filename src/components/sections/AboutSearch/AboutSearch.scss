@@ -1,0 +1,64 @@
+.about_search_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  padding: 120px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    font-weight: var(--qwik-fw-semibold);
+    font-size: 36px;
+    line-height: 50.4px;
+    color: var(--qwik-main-color);
+  }
+
+  .card {
+    border: 1px solid #e1eded;
+    box-shadow: 10px 10px 40px 0px #222e6f1a;
+    padding: 20px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    .title {
+      font-weight: var(--qwik-fw-bold);
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
+      color: var(--qwik-main-color);
+    }
+
+    .content {
+      font-weight: var(--qwik-fw-medium);
+      font-size: var(--qwik-fs-lg);
+      line-height: var(--qwik-lh-lg);
+      color: var(--qwik-black);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about_search_container {
+    padding: 60px 0;
+    .title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about_search_container {
+    padding: 60px 0;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+      font-size: 22px;
+      line-height: 35.4px;
+    }
+  }
+}

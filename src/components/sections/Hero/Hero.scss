@@ -12,7 +12,6 @@
     padding: 120px 0;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
 
     .title {
       font-size: var(--qwik-fs-xl);
@@ -28,14 +27,8 @@
   .hero_wrapper {
     &_container {
       padding: 60px 0;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .hero_wrapper {
-    &_container {
       flex-direction: column;
+      gap: 1rem;
     }
   }
 }

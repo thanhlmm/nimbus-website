@@ -37,9 +37,10 @@ export default component$(() => {
   });
 
   useClientEffect$(() => {
+    const lastScrollY = window.pageYOffset;
     const handleCheckIsSticky = () => {
-      const scrollTop = window.scrollY;
-      state.isSticky = scrollTop >= 100 ? "sticky" : "";
+      const scrollY = window.pageYOffset;
+      state.isSticky = scrollY > lastScrollY ? "sticky" : "";
     };
     window.addEventListener("scroll", handleCheckIsSticky);
     return () => {
