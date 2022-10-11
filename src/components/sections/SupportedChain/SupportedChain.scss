@@ -11,6 +11,13 @@
     line-height: 50.4px;
     color: var(--qwik-main-color);
   }
+
+  .sub_title {
+    font-weight: var(--qwik-fw-medium);
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--qwik-tosca);
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -18,6 +25,9 @@
     padding: 60px 0;
     .main_title {
       font-size: 30px;
+    }
+    .sub_title {
+      font-size: 22px;
     }
   }
 }

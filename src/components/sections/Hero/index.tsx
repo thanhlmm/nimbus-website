@@ -25,15 +25,11 @@ export default component$(() => {
           />
           <div class="flex flex-col gap-3 md:mt-10 mt-2">
             <div class="title">Quality Data From</div>
-            <div class="flex lg:gap-28 md:gap-20 md:flex-row flex-col gap-4">
-              <div class="flex gap-4">
-                <img src={CoingeckoLogo} alt="Coingecko" />
-                <img src={DebankLogo} alt="Debank" />
-              </div>
-              <div class="flex gap-4 lg:ml-0 -ml-[7px]">
-                <img src={AnkrLogo} alt="Ankr" />
-                <img src={CovalentLogo} alt="Covalent" />
-              </div>
+            <div class="grid grid-cols-4 items-center gap-4">
+              <img src={CoingeckoLogo} alt="Coingecko" />
+              <img src={DebankLogo} alt="Debank" />
+              <img src={AnkrLogo} alt="Ankr" />
+              <img src={CovalentLogo} alt="Covalent" />
             </div>
           </div>
         </div>
