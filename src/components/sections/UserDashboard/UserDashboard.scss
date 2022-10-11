@@ -1,4 +1,4 @@
-.about_search_container {
+.user_dashboard_container {
   max-width: var(--qwik-max-width);
   margin: auto;
   width: var(--qwik-section-width);
@@ -7,6 +7,7 @@
 
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 
   .main_title {
     font-weight: var(--qwik-fw-semibold);
@@ -25,11 +26,28 @@
     align-items: flex-start;
     gap: 12px;
 
-    .title {
-      font-weight: var(--qwik-fw-bold);
-      font-size: var(--qwik-fs-xl);
-      line-height: var(--qwik-lh-xl);
-      color: var(--qwik-main-color);
+    .title_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        font-weight: var(--qwik-fw-bold);
+        font-size: var(--qwik-fs-xl);
+        line-height: var(--qwik-lh-xl);
+        color: var(--qwik-main-color);
+      }
+
+      .highlight {
+        font-weight: var(--qwik-fw-semibold);
+        font-size: var(--qwik-fs-sm);
+        line-height: var(--qwik-lh-sm);
+        color: var(--qwik-main-color);
+        background: #a4eeee;
+        padding: 4px 10px;
+        border-radius: 50px;
+        text-align: center;
+      }
     }
 
     .content {
@@ -42,7 +60,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .about_search_container {
+  .user_dashboard_container {
     padding: 60px 0;
     .main_title {
       font-size: 30px;
@@ -51,7 +69,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .about_search_container {
+  .user_dashboard_container {
     flex-direction: column;
     gap: 1rem;
     .main_title {
@@ -61,11 +79,17 @@
 }
 
 @media screen and (max-width: 500px) {
-  .about_search_container {
+  .user_dashboard_container {
     .card {
-      .title {
-        font-size: var(--qwik-fs-lg);
-        line-height: var(--qwik-lh-lg);
+      .title_container {
+        .title {
+          font-size: var(--qwik-fs-lg);
+          line-height: var(--qwik-lh-lg);
+        }
+        .highlight {
+          font-size: var(--qwik-fs-xs);
+          line-height: var(--qwik-lh-xs);
+        }
       }
       .content {
         font-size: var(--qwik-fs-base);

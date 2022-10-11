@@ -1,16 +1,22 @@
 import { component$ } from "@builder.io/qwik";
 import Hero from "~/components/sections/Hero";
 import Advertisement from "~/components/sections/Advertisement";
-// import Evolution from "~/components/sections/Evolution";
+import Evolution from "~/components/sections/Evolution";
 import AboutSearch from "~/components/sections/AboutSearch";
+import UserDashboard from "~/components/sections/UserDashboard";
+import TrxInfo from "~/components/sections/TrxInfo";
+import SupportedChain from "~/components/sections/SupportedChain";
 
 export default component$(() => {
   return (
     <>
       <Hero />
       <Advertisement />
-      {/* <Evolution /> */}
+      <Evolution />
       <AboutSearch />
+      <UserDashboard />
+      <TrxInfo />
+      <SupportedChain />
     </>
   );
 });

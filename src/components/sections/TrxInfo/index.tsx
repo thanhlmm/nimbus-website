@@ -1,27 +1,23 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import styles from "./AboutSearch.scss?inline";
+import styles from "./TrxInfo.scss?inline";
 
-import Image from "../../../assets/images/about_search/image.svg";
+import Image from "../../../assets/images/trx_info/image.svg";
 import Check from "../../../assets/icons/check.svg";
 
 export const cards = [
   {
-    title: "Security Check",
+    title: "Quick look on any pages",
     content:
       "Nimbus answer the question: ”Is this website safe to use?”; ”Is it a scam website?”",
   },
   {
-    title: "Term Explain",
+    title: "Know how value move?",
     content:
       "Help new user understand terms in Web3 and then know more about the concept",
   },
   {
-    title: "In - Page Token Info",
+    title: "What's inside an address?",
     content: "How this news correlate with its token price?",
-  },
-  {
-    title: "Search Thousand of Tokens",
-    content: "Indeep analysis to explore new investment opportunities",
   },
 ];
 
@@ -29,12 +25,12 @@ export default component$(() => {
   useStylesScoped$(styles);
 
   return (
-    <div class="about_search_container">
-      <div class="main_title lg:hidden block -mb-4">
-        In browser info & search
+    <div class="trx_info_container">
+      <div class="main_title lg:hidden block mb-4">
+        Address & Transaction Info
       </div>
       <div class="lg:flex-[0.8] flex-1 flex flex-col gap-6 lg:order-1 order-2">
-        <div class="main_title lg:block hidden">In browser info & search</div>
+        <div class="main_title lg:block hidden">Address & Transaction Info</div>
         {cards.map((item, index) => {
           return (
             <div class="card" key={index}>

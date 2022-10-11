@@ -1,0 +1,29 @@
+.supported_chain_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  padding: 120px 0;
+
+  .main_title {
+    font-weight: var(--qwik-fw-semibold);
+    font-size: 36px;
+    line-height: 50.4px;
+    color: var(--qwik-main-color);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .supported_chain_container {
+    padding: 60px 0;
+    .main_title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 500px) {
+}
