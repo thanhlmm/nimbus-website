@@ -19,7 +19,7 @@ export default component$(() => {
         <div class="flex flex-col gap-8 xl:flex-[0.75] flex-1 lg:order-1 order-2">
           <Title title="Make Web3 simple for everyone" />
           <Button
-            text="Join beta test"
+            text="Join Beta Test"
             is_main_btn={true}
             onClick$={() => console.log("HELLO")}
           />
