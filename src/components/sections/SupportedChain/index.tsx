@@ -19,16 +19,16 @@ export default component$(() => {
         <div class="main_title">Supported Chain</div>
       </div>
       <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center mt-9">
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Ethereum} alt="Ethereum" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Binance} alt="Binance" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Polygon} alt="Polygon" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Avalanche} alt="Avalanche" />
         </div>
       </div>
@@ -36,16 +36,16 @@ export default component$(() => {
         <div class="sub_title">And many more soon...</div>
       </div>
       <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center">
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Solona} alt="Solona" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Optimism} alt="Optimism" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Arbitrum} alt="Arbitrum" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Near} alt="Near" />
         </div>
       </div>
