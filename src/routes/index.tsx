@@ -6,6 +6,7 @@ import AboutSearch from "~/components/sections/AboutSearch";
 import UserDashboard from "~/components/sections/UserDashboard";
 import TrxInfo from "~/components/sections/TrxInfo";
 import SupportedChain from "~/components/sections/SupportedChain";
+import Connect from "~/components/sections/Connect";
 
 export default component$(() => {
   return (
@@ -17,6 +18,7 @@ export default component$(() => {
       <UserDashboard />
       <TrxInfo />
       <SupportedChain />
+      <Connect />
     </>
   );
 });
