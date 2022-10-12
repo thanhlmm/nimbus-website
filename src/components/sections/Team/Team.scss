@@ -1,0 +1,82 @@
+.team_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  padding-bottom: 120px;
+
+  .sub-title {
+    width: 60%;
+    text-align: center;
+    font-weight: var(--qwik-fw-regular);
+    font-size: var(--qwik-fs-lg);
+    line-height: var(--qwik-lh-lg);
+    color: var(--qwik-black);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    width: 370px;
+
+    .about_container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .quote {
+        font-weight: var(--qwik-fw-semibold);
+        font-size: 24px;
+        line-height: 36px;
+        color: var(--qwik-main-color);
+        margin-bottom: 8px;
+      }
+
+      .name {
+        font-weight: var(--qwik-fw-regular);
+        font-size: var(--qwik-fs-lg);
+        line-height: var(--qwik-lh-lg);
+        color: var(--qwik-tosca);
+      }
+
+      .position {
+        font-weight: var(--qwik-fw-regular);
+        font-size: var(--qwik-fs-lg);
+        line-height: var(--qwik-lh-lg);
+        color: var(--qwik-gray-1);
+
+        span {
+          font-weight: var(--qwik-fw-bold);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team_container {
+    .sub-title {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .team_container {
+    .sub-title {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .team_container {
+    .sub-title {
+      width: 100%;
+    }
+  }
+}
