@@ -1,5 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import styles from "./CardListDesktop.scss?inline";
+import styles from "./CardListDesktop.scss";
 import classNames from "classnames";
 
 import IMG_ROCKET from "~/assets/images/evolution/rocket.svg";
@@ -25,7 +25,7 @@ export default component$(() => {
             </div>
           </div>
           <span
-            className={classNames(`label label-${index}`, {
+            className={classNames(`label`, {
               ["label--soon"]: card.year === "Soon"
             })}
           >
