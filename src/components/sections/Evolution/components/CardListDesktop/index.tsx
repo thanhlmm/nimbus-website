@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./CardListDesktop.scss?inline";
 import classNames from "classnames";
 
@@ -8,7 +8,7 @@ import { cards } from "~/components/sections/Evolution";
 
 
 export default component$(() => {
-  useStyles$(styles); // Temp fix for https://github.com/BuilderIO/qwik/issues/1662
+  useStylesScoped$(styles);
 
   return (
     <div class="hidden md:flex md:flex-row">
@@ -30,6 +30,7 @@ export default component$(() => {
             })}
           >
             {card.year}
+            <div className="line" />
           </span>
           {index === 2 && (
             <img

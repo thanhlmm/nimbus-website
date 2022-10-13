@@ -5,8 +5,9 @@
   flex-direction: column;
   align-items: center;
 
-  &:nth-child(1) .label::after,
-  &:nth-child(2) .label::after {
+  &:nth-child(1) .line,
+  &:nth-child(2) .line { 
+    // Temp fix for https://github.com/BuilderIO/qwik/issues/1662
     content: "";
     position: absolute;
     display: block;
@@ -16,7 +17,7 @@
     border-top: 3px dashed var(--qwik-tosca);
   }
 
-  &:nth-child(3) .label::after {
+  &:nth-child(3) .line {
     content: "";
     position: absolute;
     display: block;
