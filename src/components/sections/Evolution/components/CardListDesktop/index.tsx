@@ -1,4 +1,4 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 import styles from "./CardListDesktop.scss?inline";
 import classNames from "classnames";
 
@@ -8,13 +8,13 @@ import { cards } from "~/components/sections/Evolution";
 
 
 export default component$(() => {
-  useStylesScoped$(styles);
+  useStyles$(styles); // Temp fix for https://github.com/BuilderIO/qwik/issues/1662
 
   return (
     <div class="hidden md:flex md:flex-row">
       {cards.map((card, index) => (
-        <div className="card" key={index}>
-          <div class="card-group">
+        <div className="item" key={index}>
+          <div class="item-group">
             <p className="title">{card.title}</p>
             <div class="image">
               <img
