@@ -60,16 +60,18 @@ export default component$(() => {
     <>
       <header class={headerWrapperStyle}>
         <div class={headerStyle}>
-          <div class="logo">
+          <a href="/" class="logo">
             <img src={Logo} alt="logo" class="w-full h-full object-cover" />
-          </div>
+          </a>
           <div class="block lg:hidden" onClick$={() => (state.isOpen = true)}>
             <img src={MenuBar} />
           </div>
           <div class="nav_links">
-            <div class="link">Home</div>
-            <div class="link">Transaction Explain</div>
-            <div class="link">Blog</div>
+            <a href="/" class="link">
+              Home
+            </a>
+            {/* <div class="link">Transaction Explain</div>
+            <div class="link">Blog</div> */}
           </div>
         </div>
       </header>

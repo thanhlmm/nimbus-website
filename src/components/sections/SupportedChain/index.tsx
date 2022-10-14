@@ -26,10 +26,14 @@ export default component$(() => {
           <img src={Binance} alt="Binance" />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Polygon} alt="Polygon" />
+          <img
+            src={Polygon}
+            alt="Polygon"
+            class="w-[163px] h-[34px] md:my-0 my-4"
+          />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Avalanche} alt="Avalanche" />
+          <img src={Avalanche} alt="Avalanche" class="w-[242px] h-[46px]" />
         </div>
       </div>
       <div class="flex justify-center my-8">
@@ -40,7 +44,11 @@ export default component$(() => {
           <img src={Solona} alt="Solona" />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Optimism} alt="Optimism" />
+          <img
+            src={Optimism}
+            alt="Optimism"
+            class="w-[177px] h-[46px] md:mt-0 mt-4"
+          />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Arbitrum} alt="Arbitrum" />

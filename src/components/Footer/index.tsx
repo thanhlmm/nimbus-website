@@ -2,7 +2,7 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./Footer.scss?inline";
 
 import TwitterLogo from "../../assets/icons/twitter.svg";
-import DiscordLogo from "../../assets/icons/discord.svg";
+// import DiscordLogo from "../../assets/icons/discord.svg";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -12,22 +12,22 @@ export default component$(() => {
       <div class="footer-container">
         <div class="copyright">© 2023 Nimbus, Inc. All rights reserved.</div>
         <div class="flex items-center justify-center md:gap-14 gap-7 lg:order-2 order-1">
-          <a href="#" class="link">
+          <a href="https://nimbus.sleekplan.app/" class="link">
             Feedback
           </a>
-          <a href="#" class="link">
+          <a href="/privacy" class="link">
             Privacy
           </a>
-          <a href="#" class="link">
+          {/* <a href="#" class="link">
             Blog
-          </a>
+          </a> */}
           <div class="flex md:gap-7 gap-6">
-            <a href="#">
+            <a href="https://twitter.com/nimbus_ext">
               <img src={TwitterLogo} alt="twitter" />
             </a>
-            <a href="#">
+            {/* <a href="#">
               <img src={DiscordLogo} alt="discord" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

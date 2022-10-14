@@ -21,6 +21,7 @@
     .logo {
       width: 150px;
       height: 50px;
+      margin-left: -20px;
     }
 
     .nav_links {
@@ -69,7 +70,7 @@
 }
 
 .header_wrapper_sticky {
-  background-color: rgba(39, 50, 111, 0.2);
+  background-color: rgba(255, 255, 255, 0.44);
 }
 
 @media screen and (max-width: 900px) {

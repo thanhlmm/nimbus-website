@@ -17,13 +17,17 @@
 
   .card {
     border: 1px solid #e1eded;
-    box-shadow: 10px 10px 40px 0px #222e6f1a;
     padding: 20px;
     border-radius: 12px;
 
     display: flex;
     align-items: flex-start;
     gap: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 10px 10px 40px 0px #222e6f1a;
+    }
 
     .title {
       font-weight: var(--qwik-fw-bold);

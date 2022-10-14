@@ -1,4 +1,4 @@
-.advertisement_wrapper {
+.problem_wrapper {
   background: linear-gradient(180deg, #f4fafe 0%, rgba(248, 249, 255, 0) 100%);
 
   &_container {
@@ -24,7 +24,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .advertisement_wrapper {
+  .problem_wrapper {
     &_container {
       .title {
         font-size: 30px;
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .advertisement_wrapper {
+  .problem_wrapper {
     &_container {
       padding: 60px 0;
       gap: 5rem;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .advertisement_wrapper {
+  .problem_wrapper {
     &_container {
       .title {
         text-align: center;

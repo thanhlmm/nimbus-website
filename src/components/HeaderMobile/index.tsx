@@ -16,9 +16,9 @@ export default component$((props: Props) => {
     <div>
       <div class={`mobile_header_container ${props.active ? "show" : ""}`}>
         <div class="header">
-          <div class="logo">
+          <a href="/" class="logo">
             <img src={Logo} alt="logo" />
-          </div>
+          </a>
           <div
             class="absolute top-5 right-6"
             onClick$={() => props.handleClose$(false)}
@@ -28,9 +28,11 @@ export default component$((props: Props) => {
         </div>
         <div class="mt-2 px-4 flex flex-col justify-between h-[90%]">
           <div class="nav_links">
-            <div class="link">Home</div>
-            <div class="link">Transaction Explain</div>
-            <div class="link">Blog</div>
+            <a href="/" class="link">
+              Home
+            </a>
+            {/* <div class="link">Transaction Explain</div>
+            <div class="link">Blog</div> */}
           </div>
         </div>
       </div>
