@@ -6,9 +6,8 @@
   align-items: center;
 
   &:nth-child(1) .line,
-  &:nth-child(2) .line { 
+  &:nth-child(2) .line {
     // Temp fix for https://github.com/BuilderIO/qwik/issues/1662
-    content: "";
     position: absolute;
     display: block;
     top: 50%;
@@ -18,7 +17,6 @@
   }
 
   &:nth-child(3) .line {
-    content: "";
     position: absolute;
     display: block;
     top: 50%;
@@ -36,7 +34,7 @@
   color: var(--qwik-main-color);
 }
 
-.item-group{
+.item-group {
   display: flex;
   flex-direction: column;
   height: 280px;
@@ -84,12 +82,19 @@
   left: 95%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1082px) {
   .rocket-img {
     width: 60px;
     height: 60px;
     top: 66%;
     left: 90%;
+  }
+
+  .item {
+    &:nth-child(3) .line {
+      content: "";
+      width: 100%;
+    }
   }
 
   .label-2::after {

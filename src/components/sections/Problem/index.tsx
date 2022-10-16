@@ -10,7 +10,7 @@ export default component$(() => {
   return (
     <div class="problem_wrapper">
       <div class="problem_wrapper_container">
-        <img src={Text} alt="Text" />
+        <img src={Text} alt="Text" class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="400"/>
         <div class="flex items-center md:gap-5 md:flex-row flex-col gap-1">
           <div class="flex-1">
             <img src={Chart} alt="Chart" class="w-full h-full object-cover" />
