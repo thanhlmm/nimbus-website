@@ -30,14 +30,16 @@ export default component$(() => {
             })}
           >
             {card.year}
-            <div className="line" />
+            <div className="wow bounceInLeft line" data-wow-duration="2s"
+                 data-wow-delay={index === 0 ? "0s" : index === 1 ? "1s" : "2s"} />
           </span>
           {index === 2 && (
             <img
               src={IMG_ROCKET}
               alt="rocket"
               className="wow bounceInLeft rocket-img w-full object-contain"
-              data-wow-duration="4s"
+              data-wow-duration="3s"
+              data-wow-delay="3s"
             />
           )}
           <p className="content">{card.content}</p>

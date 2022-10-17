@@ -23,6 +23,222 @@
   }
 }
 
+.word-cloud-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 256px;
+  user-select: none;
+
+  .fz-1 {
+    font-size: 0.8rem;
+  }
+
+  .fz-2 {
+    font-size: 1rem;
+  }
+
+  .fz-3 {
+    font-size: 1.25rem;
+  }
+
+  .fz-4 {
+    font-size: 1.5rem;
+  }
+
+  .fz-5 {
+    font-size: 1.75rem;
+  }
+
+  .fz-6 {
+    font-size: 2rem;
+  }
+
+  .fz-7 {
+    font-size: 2.25rem;
+  }
+
+  .fz-8 {
+    font-size: 2.5rem;
+  }
+
+  .c-1 {
+    color: var(--qwik-main-color);
+  }
+
+  .c-2 {
+    color: var(--qwik-tosca);
+  }
+
+  .c-3 {
+    color: #BDBDBD;
+  }
+
+  .word-1 {
+    top: 50%;
+    left: 45%;
+  }
+
+  .word-2 {
+    top: 20%;
+    left: 15%;
+  }
+
+  .word-3 {
+    top: 30%;
+    left: 10%;
+  }
+
+  .word-4 {
+    top: 30%;
+    left: 85%;
+  }
+
+  .word-5 {
+    top: 30%;
+    left: 55%;
+  }
+
+  .word-6 {
+    top: 55%;
+    left: 28%;
+  }
+
+  .word-7 {
+    top: 30%;
+    left: 65%;
+  }
+
+  .word-8 {
+    top: 78%;
+    left: 22%;
+  }
+
+  .word-9 {
+    top: 85%;
+    left: 30%;
+  }
+
+  .word-10 {
+    top: 30%;
+    left: 95%;
+  }
+
+  .word-11 {
+    top: 43%;
+    left: 3%;
+  }
+
+  .word-12 {
+    top: 15%;
+    left: 60%;
+  }
+
+  .word-13 {
+    top: 0%;
+    left: 30%;
+  }
+
+  .word-14 {
+    top: 90%;
+    left: 60%;
+  }
+
+  .word-15 {
+    top: 30%;
+    left: 35%;
+  }
+
+  .word-16 {
+    top: 45%;
+    left: 30%;
+  }
+
+  .word-17 {
+    top: 10%;
+    left: 90%;
+  }
+
+  .word-18 {
+    top: 100%;
+    left: 5%;
+  }
+
+  .word-19 {
+    top: 50%;
+    left: 80%;
+  }
+
+  .word-20 {
+    top: 25%;
+    left: 25%;
+  }
+
+  .word-21 {
+    top: 77%;
+    left: 55%;
+  }
+
+  .word-22 {
+    top: 60%;
+    left: 0%;
+  }
+
+  .word-23 {
+    top: 100%;
+    left: 40%;
+  }
+
+  .word-24 {
+    top: 58%;
+    left: 62%;
+  }
+
+  .word-25 {
+    top: 100%;
+    left: 25%;
+  }
+
+  .word-26 {
+    top: 75%;
+    left: 43%;
+  }
+
+  .word-27 {
+    top: 17%;
+    left: 65%;
+  }
+
+  .word-28 {
+    top: 68%;
+    left: 85%;
+  }
+
+  .word-29 {
+    top: 68%;
+    left: 70%;
+  }
+
+  .word-30 {
+    top: 30%;
+    left: 75%;
+  }
+
+  .word-31 {
+    top: 4%;
+    left: 2%;
+  }
+
+  .word-32 {
+    top: 0%;
+    left: 70%;
+  }
+
+  .word-33 {
+    top: 100%;
+    left: 85%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .problem_wrapper {
     &_container {

@@ -36,7 +36,7 @@ export default component$(() => {
                 src={IMG_ROCKET}
                 alt="rocket"
                 className="wow bounceInDown rocket-img w-full object-contain"
-                data-wow-duration="4s"
+                data-wow-duration="2s"
               />
             )}
             <p className="content">{card.content}</p>
