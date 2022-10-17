@@ -1,11 +1,14 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import {
+  component$,
+  useStylesScoped$,
+  useClientEffect$,
+} from "@builder.io/qwik";
 import styles from "./CardListDesktop.scss?inline";
 import classNames from "classnames";
 
 import IMG_ROCKET from "~/assets/images/evolution/rocket.svg";
 
 import { cards } from "~/components/sections/Evolution";
-
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -26,17 +29,25 @@ export default component$(() => {
           </div>
           <span
             className={classNames(`label`, {
-              ["label--soon"]: card.year === "Soon"
+              ["label--soon"]: card.year === "Soon",
             })}
           >
             {card.year}
-            <div className="line" />
+            <div
+              className="line"
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-delay={index === 0 ? "0" : index === 1 ? "500" : "1000"}
+            />
           </span>
           {index === 2 && (
             <img
               src={IMG_ROCKET}
               alt="rocket"
               className="rocket-img w-full object-contain"
+              data-aos="fade-right"
+              data-aos-delay="1800"
+              data-aos-duration="1500"
             />
           )}
           <p className="content">{card.content}</p>

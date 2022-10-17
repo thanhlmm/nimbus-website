@@ -3,6 +3,7 @@ import styles from "./Problem.scss?inline";
 
 import Text from "../../../assets/images/advertisement/text.svg";
 import Chart from "../../../assets/images/advertisement/chart.svg";
+import WordCloud from "~/components/sections/Problem/WordCloud";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -10,7 +11,7 @@ export default component$(() => {
   return (
     <div class="problem_wrapper">
       <div class="problem_wrapper_container">
-        <img src={Text} alt="Text" />
+        <WordCloud />
         <div class="flex items-center md:gap-5 md:flex-row flex-col gap-1">
           <div class="flex-1">
             <img src={Chart} alt="Chart" class="w-full h-full object-cover" />

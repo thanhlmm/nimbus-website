@@ -1,4 +1,4 @@
-.card {
+.item {
   position: relative;
   display: flex;
   gap: 40px;
@@ -23,8 +23,8 @@
   }
 }
 
-.label-0::after, .label-1::after {
-  content: "";
+.item:nth-child(1) .line,
+.item:nth-child(2) .line {
   position: absolute;
   display: block;
   top: 100%;
@@ -33,8 +33,7 @@
   border-right: 3px dashed var(--qwik-tosca);
 }
 
-.label-2::after {
-  content: "";
+.item:nth-child(3) .line {
   position: absolute;
   display: block;
   top: 100%;
@@ -43,7 +42,7 @@
   border-right: 3px dashed var(--qwik-tosca);
 }
 
-.card-content{
+.card-content {
   display: flex;
   flex-direction: column;
   gap: 10px 0;
@@ -57,7 +56,7 @@
   color: var(--qwik-main-color);
 }
 
-.image{
+.image {
   margin-left: -50px;
 }
 
@@ -72,8 +71,18 @@
 .rocket-img {
   width: 80px;
   height: 80px;
-  transform: rotate(90deg);
   position: absolute;
-  top: 50%;
   left: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .rocket-img {
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .rocket-img {
+    top: 55%;
+  }
 }
