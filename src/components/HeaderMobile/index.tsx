@@ -31,6 +31,12 @@ export default component$((props: Props) => {
             <a href="/" class="link">
               Home
             </a>
+            <a
+              href="https://nimbus.sleekplan.app/"
+              class="link"
+            >
+              Feedback
+            </a>
             {/* <div class="link">Transaction Explain</div>
             <div class="link">Blog</div> */}
           </div>

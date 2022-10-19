@@ -13,7 +13,7 @@ export default component$(() => {
     <div class="connect_container">
       <div class="card_wrapper">
         <div class="card_wrapper_container">
-          <div class="title">Be the early pioneers into the new era now</div>
+          <div class="title">Be the early pioneers in the new era now</div>
           <Button
             data-tf-popup="DN8uU1gz"
             data-tf-size="70"

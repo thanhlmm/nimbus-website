@@ -38,7 +38,7 @@ export default component$(() => {
           </div>
         </div>
         <div class="flex-1 xl:-mt-10 lg:order-2 order-1 lg:mt-0 -mt-12">
-          <img src={Hero} alt="img" class="w-full h-full object-contain " />
+          <img src={Hero} alt="img" class="w-full h-full md:h-[477px] object-contain " />
         </div>
       </div>
     </div>
