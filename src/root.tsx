@@ -28,6 +28,7 @@ export default component$(() => {
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link rel="stylesheet" href="/animate.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <script src="//embed.typeform.com/next/embed.js"></script>
         <RouterHead />
       </head>
       <body lang="en">

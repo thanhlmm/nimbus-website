@@ -21,6 +21,7 @@ export default component$((props: Props) => {
 
   return (
     <button
+      {...props}
       disabled={props.disabled}
       onClick$={props.onClick$}
       class={btnContainer}

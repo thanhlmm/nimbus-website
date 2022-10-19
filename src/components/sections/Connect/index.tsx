@@ -15,6 +15,10 @@ export default component$(() => {
         <div class="card_wrapper_container">
           <div class="title">Be the early pioneers into the new era now</div>
           <Button
+            data-tf-popup="DN8uU1gz"
+            data-tf-size="70"
+            data-tf-iframe-props="title=Nimbus waiting list"
+            data-tf-medium="snippet"
             text="Join Beta Test"
             is_main_btn={false}
             onClick$={() => console.log("HELLO")}
