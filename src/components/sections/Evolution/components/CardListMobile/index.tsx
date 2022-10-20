@@ -2,9 +2,9 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./CardListMobile.scss?inline";
 import classNames from "classnames";
 
-import IMG_ROCKET from "~/assets/images/evolution/rocket-rotate.svg";
-
 import { cards } from "~/components/sections/Evolution";
+
+import IMG_ROCKET from "~/assets/images/evolution/rocket-rotate.svg";
 
 export default component$(() => {
   useStylesScoped$(styles);

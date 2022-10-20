@@ -24,10 +24,10 @@
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
   .header {
-    position: relative;
-    padding: 18px 0 50px 0;
+    padding: 18px 20px 50px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
     .logo {
       width: 150px;
@@ -40,15 +40,15 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
 
     .link {
-      text-align: center;
-      font-size: var(--qwik-fs-lg);
-      line-height: var(--qwik-lh-lg);
+      text-align: left;
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
       font-weight: var(--qwik-fw-medium);
       color: var(--qwik-main-color);
       border-bottom: 0.5px solid var(--qwik-main-color);
-      margin: 0 32px;
       padding-bottom: 16px;
       cursor: pointer;
       transition: all 0.3s ease-out;

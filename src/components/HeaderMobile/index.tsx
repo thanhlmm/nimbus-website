@@ -19,22 +19,16 @@ export default component$((props: Props) => {
           <a href="/" class="logo">
             <img src={Logo} alt="logo" />
           </a>
-          <div
-            class="absolute top-5 right-6"
-            onClick$={() => props.handleClose$(false)}
-          >
+          <div class="mt-3" onClick$={() => props.handleClose$(false)}>
             <img src={Close} alt="menuBar" width={35} height={35} />
           </div>
         </div>
-        <div class="mt-2 px-4 flex flex-col justify-between h-[90%]">
+        <div class="mt-2 flex flex-col justify-between h-[90%]">
           <div class="nav_links">
             <a href="/" class="link">
               Home
             </a>
-            <a
-              href="https://nimbus.sleekplan.app/"
-              class="link"
-            >
+            <a href="https://nimbus.sleekplan.app/" class="link">
               Feedback
             </a>
             {/* <div class="link">Transaction Explain</div>
