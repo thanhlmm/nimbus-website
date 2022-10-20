@@ -19,13 +19,37 @@ export const RouterHead = component$(() => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet"
       />
 
-      <meta property="og:site_name" content="Qwik" />
+      {/* <meta property="og:site_name" content="Qwik" />
       <meta name="twitter:site" content="@QwikDev" />
-      <meta name="twitter:title" content="Qwik" />
+      <meta name="twitter:title" content="Qwik" /> */}
+
+      {/* <meta
+        property="og:image"
+        content="https://tribes-be.s3.ap-southeast-1.amazonaws.com/files/40973d84e40ff6708a59af1287047293.png"
+      /> */}
+
+      <meta name="description" content="Make web3 simple for everyone" />
+      <meta
+        property="og:title"
+        content="Nimbus - Make web3 simple for everyone"
+      />
+      <meta property="og:description" content="Make web3 simple for everyone" />
+      <meta
+        property="twitter:title"
+        content="Nimbus - Make web3 simple for everyone"
+      />
+      <meta
+        property="twitter:description"
+        content="Make web3 simple for everyone"
+      />
+      {/* <meta
+        property="twitter:image"
+        content="https://tribes-be.s3.ap-southeast-1.amazonaws.com/files/40973d84e40ff6708a59af1287047293.png"
+      /> */}
 
       {head.meta.map((m) => (
         <meta {...m} />
