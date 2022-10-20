@@ -23,10 +23,10 @@ export default component$(() => {
           </a> */}
           <div class="flex md:gap-7 gap-6">
             <a href="https://twitter.com/nimbus_ext">
-              <img src={TwitterLogo} alt="twitter" />
+              <img src={TwitterLogo} alt="twitter" loading="lazy" />
             </a>
             {/* <a href="#">
-              <img src={DiscordLogo} alt="discord" />
+              <img src={DiscordLogo} alt="discord" loading="lazy"/>
             </a> */}
           </div>
         </div>

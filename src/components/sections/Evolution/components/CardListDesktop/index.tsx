@@ -20,6 +20,7 @@ export default component$(() => {
                 src={card.image}
                 alt={card.title}
                 class="w-full object-contain"
+                loading="lazy"
               />
             </div>
           </div>
@@ -44,6 +45,7 @@ export default component$(() => {
               data-aos="fade-right"
               data-aos-delay="1800"
               data-aos-duration="1500"
+              loading="lazy"
             />
           )}
           <p class="content">{card.content}</p>

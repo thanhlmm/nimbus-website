@@ -28,6 +28,7 @@ export default component$(() => {
                 src={card.image}
                 alt={card.title}
                 class="w-full object-contain"
+                loading="lazy"
               />
             </div>
             {index === 2 && (
@@ -36,6 +37,7 @@ export default component$(() => {
                 alt="rocket"
                 class="wow bounceInDown rocket-img w-full object-contain"
                 data-wow-duration="2s"
+                loading="lazy"
               />
             )}
             <p class="content">{card.content}</p>

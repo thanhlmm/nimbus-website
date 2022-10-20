@@ -31,7 +31,12 @@ export default component$(() => {
     <div class="user_dashboard_container">
       <div class="main_title lg:hidden block">User Dashboard</div>
       <div class="flex-1">
-        <img src={Image} alt="img" class="w-full h-full object-contain " />
+        <img
+          src={Image}
+          alt="img"
+          class="w-full h-full object-contain"
+          loading="lazy"
+        />
       </div>
       <div class="lg:flex-[0.8] flex-1 flex flex-col gap-6">
         <div class="main_title lg:block hidden">User Dashboard</div>

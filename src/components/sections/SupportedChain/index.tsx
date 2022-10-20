@@ -20,10 +20,10 @@ export default component$(() => {
       </div>
       <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center mt-9">
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Ethereum} alt="Ethereum" />
+          <img src={Ethereum} alt="Ethereum" loading="lazy" />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Binance} alt="Binance" />
+          <img src={Binance} alt="Binance" loading="lazy" />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img
@@ -33,7 +33,12 @@ export default component$(() => {
           />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Avalanche} alt="Avalanche" class="w-[242px] h-[46px]" />
+          <img
+            src={Avalanche}
+            alt="Avalanche"
+            class="w-[242px] h-[46px]"
+            loading="lazy"
+          />
         </div>
       </div>
       <div class="flex justify-center my-8">
@@ -41,20 +46,21 @@ export default component$(() => {
       </div>
       <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center">
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Solona} alt="Solona" />
+          <img src={Solona} alt="Solona" loading="lazy" />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img
             src={Optimism}
             alt="Optimism"
             class="w-[177px] h-[46px] md:mt-0 mt-4"
+            loading="lazy"
           />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Arbitrum} alt="Arbitrum" />
+          <img src={Arbitrum} alt="Arbitrum" loading="lazy" />
         </div>
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
-          <img src={Near} alt="Near" />
+          <img src={Near} alt="Near" loading="lazy" />
         </div>
       </div>
     </div>

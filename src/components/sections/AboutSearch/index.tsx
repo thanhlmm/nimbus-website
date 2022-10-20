@@ -42,7 +42,8 @@ export default component$(() => {
                 <img
                   src={Check}
                   alt="check"
-                  class="w-full h-full object-contain "
+                  class="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <div class="flex flex-col md:gap-2 gap-1 flex-1 -mt-1">
@@ -54,7 +55,12 @@ export default component$(() => {
         })}
       </div>
       <div class="flex-1 lg:order-2 order-1">
-        <img src={Image} alt="img" class="w-full h-full object-contain " />
+        <img
+          src={Image}
+          alt="img"
+          class="w-full h-full object-contain"
+          loading="lazy"
+        />
       </div>
     </div>
   );

@@ -70,7 +70,11 @@ export default component$(() => {
               <div class="card" key={index}>
                 <div class="flex gap-3">
                   <div class="w-[46px] h-[46px] overflow-hidden rounded-full">
-                    <img src={item.src} class="w-full h-full object-contain" />
+                    <img
+                      src={item.src}
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="flex flex-col">
                     <div class="name">{item.name}</div>
@@ -89,7 +93,11 @@ export default component$(() => {
               <div class="card" key={index}>
                 <div class="flex gap-3">
                   <div class="w-[46px] h-[46px] overflow-hidden rounded-full">
-                    <img src={item.src} class="w-full h-full object-contain" />
+                    <img
+                      src={item.src}
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="flex flex-col">
                     <div class="name">{item.name}</div>
@@ -108,7 +116,11 @@ export default component$(() => {
               <div class="card" key={index}>
                 <div class="flex gap-3">
                   <div class="w-[46px] h-[46px] overflow-hidden rounded-full">
-                    <img src={item.src} class="w-full h-full object-contain" />
+                    <img
+                      src={item.src}
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="flex flex-col">
                     <div class="name">{item.name}</div>

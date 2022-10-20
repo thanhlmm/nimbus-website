@@ -24,10 +24,10 @@ export default component$(() => {
             onClick$={() => console.log("HELLO")}
           />
           <div class="dot_one">
-            <img src={DotOne} />
+            <img src={DotOne} loading="lazy" />
           </div>
           <div class="dot_two">
-            <img src={DotTwo} />
+            <img src={DotTwo} loading="lazy" />
           </div>
         </div>
       </div>
