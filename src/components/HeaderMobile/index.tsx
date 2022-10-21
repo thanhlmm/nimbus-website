@@ -20,7 +20,7 @@ export default component$((props: Props) => {
             <img src={Logo} alt="logo" width={"100%"} height={"100%"} />
           </a>
           <div class="mt-3" onClick$={() => props.handleClose$(false)}>
-            <img src={Close} alt="menuBar" width={35} height={35} />
+            <img src={Close} alt="close" width={35} height={35} />
           </div>
         </div>
         <div class="mt-2 flex flex-col justify-between h-[90%]">

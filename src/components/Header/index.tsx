@@ -70,7 +70,7 @@ export default component$(() => {
             />
           </a>
           <div class="block lg:hidden" onClick$={() => (state.isOpen = true)}>
-            <img src={MenuBar} />
+            <img src={MenuBar} alt="menu" width={35} height={35} />
           </div>
           <div class="nav_links">
             <a
