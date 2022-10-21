@@ -109,6 +109,8 @@ export default component$(() => {
           class="wow fadeInUp"
           data-wow-duration="2s"
           data-wow-offset="400"
+          width={"100%"}
+          height={"100%"}
         />
       </div>
     </>
