@@ -14,7 +14,7 @@ export default component$(() => {
         <WordCloud />
         <div>
           <div class="title text-center">
-            How everyone can under stand those Web3 term?
+            How everyone can understand those Web3 terms?
           </div>
         </div>
         {/* <div class="flex items-center md:gap-5 md:flex-row flex-col gap-1">
