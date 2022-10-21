@@ -61,7 +61,13 @@ export default component$(() => {
       <header class={headerWrapperStyle}>
         <div class={headerStyle}>
           <a href="/" class="logo">
-            <img src={Logo} alt="logo" class="w-full h-full object-cover" />
+            <img
+              src={Logo}
+              alt="logo"
+              class="w-full h-full object-cover"
+              width={"100%"}
+              height={"100%"}
+            />
           </a>
           <div class="block lg:hidden" onClick$={() => (state.isOpen = true)}>
             <img src={MenuBar} />

@@ -19,7 +19,9 @@ export default component$(() => {
               <img
                 src={card.image}
                 alt={card.title}
-                class="w-full object-contain"
+                class="object-contain w-full h-full"
+                width={"100%"}
+                height={"100%"}
                 loading="lazy"
               />
             </div>

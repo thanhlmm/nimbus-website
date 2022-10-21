@@ -17,7 +17,7 @@ export default component$((props: Props) => {
       <div class={`mobile_header_container ${props.active ? "show" : ""}`}>
         <div class="header">
           <a href="/" class="logo">
-            <img src={Logo} alt="logo" />
+            <img src={Logo} alt="logo" width={"100%"} height={"100%"} />
           </a>
           <div class="mt-3" onClick$={() => props.handleClose$(false)}>
             <img src={Close} alt="menuBar" width={35} height={35} />

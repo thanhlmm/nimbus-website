@@ -30,15 +30,43 @@ export default component$(() => {
           <div class="flex flex-col gap-3 md:mt-10 mt-2">
             <div class="title">Quality Data From</div>
             <div class="grid grid-cols-4 items-center gap-4">
-              <img src={CoingeckoLogo} alt="Coingecko" />
-              <img src={DebankLogo} alt="Debank" />
-              <img src={AnkrLogo} alt="Ankr" />
-              <img src={CovalentLogo} alt="Covalent" />
+              <img
+                src={CoingeckoLogo}
+                alt="Coingecko"
+                class="object-contain w-full h-full"
+                width={"100%"}
+                height={"100%"}
+              />
+              <img
+                src={DebankLogo}
+                alt="Debank"
+                class="object-contain w-full h-full"
+                width={"100%"}
+                height={"100%"}
+              />
+              <img
+                src={AnkrLogo}
+                alt="Ankr"
+                class="object-contain w-full h-full"
+                width={"100%"}
+                height={"100%"}
+              />
+              <img
+                src={CovalentLogo}
+                alt="Covalent"
+                class="object-contain w-full h-full"
+                width={"100%"}
+                height={"100%"}
+              />
             </div>
           </div>
         </div>
         <div class="flex-1 xl:-mt-10 lg:order-2 order-1 lg:mt-0 -mt-12">
-          <img src={Hero} alt="img" class="w-full h-full md:h-[477px] object-contain " />
+          <img
+            src={Hero}
+            alt="img"
+            class="w-full h-full md:h-[477px] object-contain "
+          />
         </div>
       </div>
     </div>
