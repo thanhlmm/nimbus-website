@@ -1,7 +1,7 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./UserDashboard.scss?inline";
 
-import Image from "../../../assets/images/user_dashboard/image.svg";
+import Image from "../../../assets/images/user_dashboard/image.png";
 import Check from "../../../assets/icons/check.svg";
 
 export const cards = [

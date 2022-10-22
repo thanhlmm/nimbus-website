@@ -1,7 +1,7 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./TrxInfo.scss?inline";
 
-import Image from "../../../assets/images/trx_info/image.svg";
+import Image from "../../../assets/images/trx_info/image.png";
 import Check from "../../../assets/icons/check.svg";
 
 export const cards = [

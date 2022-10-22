@@ -1,10 +1,10 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./Evolution.scss?inline";
 
-import IMG_2013 from "~/assets/images/evolution/2013.svg";
-import IMG_2017 from "~/assets/images/evolution/2017.svg";
-import IMG_2021 from "~/assets/images/evolution/2021.svg";
-import IMG_NOW from "~/assets/images/evolution/now.svg";
+import IMG_2013 from "~/assets/images/evolution/2013.png";
+import IMG_2017 from "~/assets/images/evolution/2017.png";
+import IMG_2021 from "~/assets/images/evolution/2021.png";
+import IMG_NOW from "~/assets/images/evolution/now.png";
 
 import Title from "~/components/Title";
 import CardListDesktop from "~/components/sections/Evolution/components/CardListDesktop";
