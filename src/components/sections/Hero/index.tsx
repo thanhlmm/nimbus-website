@@ -65,7 +65,8 @@ export default component$(() => {
           <img
             src={Hero}
             alt="img"
-            class="w-full min-h-[250px] h-auto md:h-[477px] object-contain "
+            class="w-full min-h-[250px] h-auto md:h-[477px] object-contain"
+            fetchpriority="high"
           />
         </div>
       </div>
