@@ -15,7 +15,7 @@ export default component$(() => {
         <div class="card_wrapper_container">
           <div class="title">Be the early pioneers in the new era now</div>
           <Button
-            data-tf-popup="DN8uU1gz"
+            data-tf-popup="NXRAWquK"
             data-tf-size="70"
             data-tf-iframe-props="title=Nimbus waiting list"
             data-tf-medium="snippet"
