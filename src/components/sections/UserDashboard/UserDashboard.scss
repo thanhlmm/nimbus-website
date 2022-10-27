@@ -16,6 +16,17 @@
     color: var(--qwik-main-color);
   }
 
+  .highlight {
+    font-weight: var(--qwik-fw-semibold);
+    font-size: var(--qwik-fs-sm);
+    line-height: var(--qwik-lh-sm);
+    color: var(--qwik-main-color);
+    background: #a4eeee;
+    padding: 4px 10px;
+    border-radius: 50px;
+    text-align: center;
+  }
+
   .card {
     border: 1px solid #e1eded;
     padding: 20px;
@@ -40,17 +51,6 @@
         font-size: var(--qwik-fs-xl);
         line-height: var(--qwik-lh-xl);
         color: var(--qwik-main-color);
-      }
-
-      .highlight {
-        font-weight: var(--qwik-fw-semibold);
-        font-size: var(--qwik-fs-sm);
-        line-height: var(--qwik-lh-sm);
-        color: var(--qwik-main-color);
-        background: #a4eeee;
-        padding: 4px 10px;
-        border-radius: 50px;
-        text-align: center;
       }
     }
 
@@ -84,16 +84,17 @@
 
 @media screen and (max-width: 500px) {
   .user_dashboard_container {
+    .highlight {
+      font-weight: var(--qwik-fw-regular);
+      font-size: var(--qwik-fs-xs);
+      line-height: var(--qwik-lh-xs);
+    }
+    
     .card {
       .title_container {
         .title {
           font-size: var(--qwik-fs-lg);
           line-height: var(--qwik-lh-lg);
-        }
-        .highlight {
-          font-weight: var(--qwik-fw-regular);
-          font-size: var(--qwik-fs-xs);
-          line-height: var(--qwik-lh-xs);
         }
       }
       .content {
