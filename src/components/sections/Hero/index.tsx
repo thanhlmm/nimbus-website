@@ -5,7 +5,7 @@ import styles from "./Hero.scss?inline";
 import Title from "~/components/Title";
 import Button from "~/components/Button";
 
-import Hero from "../../../assets/images/hero/hero.svg";
+import Hero from "../../../assets/images/hero/hero.webp";
 import CoingeckoLogo from "../../../assets/images/hero/coingecko.svg";
 import DebankLogo from "../../../assets/images/hero/debank.svg";
 import AnkrLogo from "../../../assets/images/hero/ankr.svg";
