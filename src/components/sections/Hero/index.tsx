@@ -26,7 +26,6 @@ export default component$(() => {
             data-tf-medium="snippet"
             text="Join Beta Test"
             is_main_btn={true}
-            onClick$={() => console.log("HELLO")}
           />
           <div class="flex flex-col gap-3 md:mt-10 mt-2">
             <div class="title">Quality Data From</div>
