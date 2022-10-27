@@ -1,3 +1,4 @@
+
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./Hero.scss?inline";
 
@@ -66,6 +67,8 @@ export default component$(() => {
             src={Hero}
             alt="img"
             class="w-full min-h-[250px] h-auto md:h-[477px] object-contain"
+            /*
+            // @ts-ignore */
             fetchpriority="high"
           />
         </div>
