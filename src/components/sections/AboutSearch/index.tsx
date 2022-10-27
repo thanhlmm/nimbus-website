@@ -8,7 +8,7 @@ export const cards = [
   {
     title: "Security Check",
     content:
-      `Nimbus answer the question: "Is this website safe to use?”; ”Is it a scam website?"`,
+      `Nimbus answer the question: "Is this website safe to use?"`,
   },
   {
     title: "Term Explain",
