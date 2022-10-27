@@ -19,7 +19,7 @@ export default component$(() => {
         <div class="flex flex-col gap-8 xl:flex-[0.75] flex-1 lg:order-1 order-2">
           <Title title="Make Web3 simple for everyone" />
           <Button
-            data-tf-popup="DN8uU1gz"
+            data-tf-popup="NXRAWquK"
             data-tf-size="70"
             data-tf-iframe-props="title=Nimbus waiting list"
             data-tf-medium="snippet"
