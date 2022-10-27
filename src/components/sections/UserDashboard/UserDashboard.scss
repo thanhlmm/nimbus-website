@@ -55,7 +55,7 @@
     }
 
     .content {
-      font-weight: var(--qwik-fw-medium);
+      font-weight: var(--qwik-fw-light);
       font-size: var(--qwik-fs-lg);
       line-height: var(--qwik-lh-lg);
       color: var(--qwik-black);
@@ -91,6 +91,7 @@
           line-height: var(--qwik-lh-lg);
         }
         .highlight {
+          font-weight: var(--qwik-fw-regular);
           font-size: var(--qwik-fs-xs);
           line-height: var(--qwik-lh-xs);
         }

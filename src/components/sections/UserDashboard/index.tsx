@@ -20,7 +20,7 @@ export const cards = [
   {
     title: "Suggest Farming Opportunities",
     content:
-      "Nimbus suggests farming opportunities based on your portfolio. Let's put tokens to work for you",
+      "Nimbus suggests farming opportunities based on your portfolio.\nLet's put tokens to work for you",
   },
 ];
 
@@ -55,7 +55,7 @@ export default component$(() => {
                   <div class="title">{item.title}</div>
                   {index === 3 && <div class="highlight">Coming soon</div>}
                 </div>
-                <div class="content">{item.content}</div>
+                <div class="content whitespace-pre-line">{item.content}</div>
               </div>
             </div>
           );

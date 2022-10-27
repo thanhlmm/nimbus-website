@@ -8,16 +8,16 @@ export const cards = [
   {
     title: "Quick look on any pages",
     content:
-      "Nimbus answer the question: ”Is this website safe to use?”; ”Is it a scam website?”",
+      "Get information right when you see a transaction, an address",
   },
   {
     title: "Know how value move?",
     content:
-      "Help new user understand terms in Web3 and then know more about the concept",
+      "No more technical stuff.\nNimbus shows you how values move beyond Web3",
   },
   {
     title: "What's inside an address?",
-    content: "How this news correlate with its token price?",
+    content: "Is this a whale address?\nHow many tokens this address is holding?",
   },
 ];
 
@@ -44,7 +44,7 @@ export default component$(() => {
               </div>
               <div class="flex flex-col md:gap-2 gap-1 flex-1 -mt-1">
                 <div class="title">{item.title}</div>
-                <div class="content">{item.content}</div>
+                <div class="content whitespace-pre-line">{item.content}</div>
               </div>
             </div>
           );
