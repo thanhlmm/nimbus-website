@@ -7,7 +7,7 @@ import Button from "~/components/Button";
 
 import Hero from "../../../assets/images/hero/hero.webp";
 import CoingeckoLogo from "../../../assets/images/hero/coingecko.svg";
-import DebankLogo from "../../../assets/images/hero/debank.svg";
+// import DebankLogo from "../../../assets/images/hero/debank.svg";
 import AnkrLogo from "../../../assets/images/hero/ankr.svg";
 import CovalentLogo from "../../../assets/images/hero/covalent.svg";
 
@@ -37,13 +37,13 @@ export default component$(() => {
                 width={"100%"}
                 height={"100%"}
               />
-              <img
+              {/* <img
                 src={DebankLogo}
                 alt="Debank"
                 class="object-contain w-full h-full"
                 width={"100%"}
                 height={"100%"}
-              />
+              /> */}
               <img
                 src={AnkrLogo}
                 alt="Ankr"
