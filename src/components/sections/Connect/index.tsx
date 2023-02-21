@@ -14,14 +14,16 @@ export default component$(() => {
       <div class="card_wrapper">
         <div class="card_wrapper_container">
           <div class="title">Be the early pioneers in the new era now</div>
-          <Button
-            data-tf-popup="NXRAWquK"
-            data-tf-size="70"
-            data-tf-iframe-props="title=Nimbus waiting list"
-            data-tf-medium="snippet"
-            text="Join Beta Test"
-            is_main_btn={false}
-          />
+          <a href="https://forms.gle/9UdAHNbQorYaSmBY8" target="_blank">
+            <Button
+              // data-tf-popup="NXRAWquK"
+              // data-tf-size="70"
+              // data-tf-iframe-props="title=Nimbus waiting list"
+              // data-tf-medium="snippet"
+              text="Join Beta Test"
+              is_main_btn={false}
+            />
+          </a>
           <div class="dot_one">
             <img src={DotOne} loading="lazy" />
           </div>

@@ -1,4 +1,3 @@
-
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./Hero.scss?inline";
 
@@ -19,14 +18,16 @@ export default component$(() => {
       <div class="hero_wrapper_container">
         <div class="flex flex-col gap-8 xl:flex-[0.75] flex-1 lg:order-1 order-2">
           <Title title="Make Web3 simple for everyone" />
-          <Button
-            data-tf-popup="NXRAWquK"
-            data-tf-size="70"
-            data-tf-iframe-props="title=Nimbus waiting list"
-            data-tf-medium="snippet"
-            text="Join Beta Test"
-            is_main_btn={true}
-          />
+          <a href="https://forms.gle/9UdAHNbQorYaSmBY8" target="_blank">
+            <Button
+              // data-tf-popup="NXRAWquK"
+              // data-tf-size="70"
+              // data-tf-iframe-props="title=Nimbus waiting list"
+              // data-tf-medium="snippet"
+              text="Join Beta Test"
+              is_main_btn={true}
+            />
+          </a>
           <div class="flex flex-col gap-3 md:mt-10 mt-2">
             <div class="title">Quality Data From</div>
             <div class="grid grid-cols-4 items-center gap-4">
