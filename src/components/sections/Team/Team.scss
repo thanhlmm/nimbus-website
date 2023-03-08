@@ -30,8 +30,8 @@
 
       .quote {
         font-weight: var(--qwik-fw-semibold);
-        font-size: 24px;
-        line-height: 36px;
+        font-size: 18px;
+        line-height: 26px;
         color: var(--qwik-main-color);
         margin-bottom: 8px;
       }
@@ -41,17 +41,6 @@
         font-size: var(--qwik-fs-lg);
         line-height: var(--qwik-lh-lg);
         color: var(--qwik-tosca);
-      }
-
-      .position {
-        font-weight: var(--qwik-fw-regular);
-        font-size: var(--qwik-fs-lg);
-        line-height: var(--qwik-lh-lg);
-        color: var(--qwik-gray-1);
-
-        span {
-          font-weight: var(--qwik-fw-bold);
-        }
       }
     }
   }

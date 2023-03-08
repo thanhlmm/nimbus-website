@@ -10,7 +10,7 @@ import TrxInfo from "~/components/sections/TrxInfo";
 import SupportedChain from "~/components/sections/SupportedChain";
 import Connect from "~/components/sections/Connect";
 // import Testimonials from "~/components/sections/Testimonials";
-// import Team from "~/components/sections/Team";
+import Team from "~/components/sections/Team";
 
 export default component$(() => {
   return (
@@ -23,8 +23,8 @@ export default component$(() => {
       <TrxInfo />
       <SupportedChain />
       <Connect />
-      {/* <Testimonials />
-      <Team /> */}
+      {/* <Testimonials /> */}
+      <Team />
     </>
   );
 });

@@ -23,7 +23,7 @@ export default component$(() => {
             Blog
           </a> */}
           <div class="flex items-center md:gap-7 gap-6">
-            <a href="https://github.com/getnimbus/nimbus-ext">
+            <a href="https://github.com/getnimbus">
               <img src={GithubLogo} alt="github" loading="lazy" />
             </a>
             <a href="https://twitter.com/nimbus_ext">
