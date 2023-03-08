@@ -2,7 +2,8 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./Footer.scss?inline";
 
 import TwitterLogo from "../../assets/icons/twitter.svg";
-// import DiscordLogo from "../../assets/icons/discord.svg";
+import GithubLogo from "../../assets/icons/github.svg";
+import DiscordLogo from "../../assets/icons/discord.svg";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -21,13 +22,16 @@ export default component$(() => {
           {/* <a href="#" class="link">
             Blog
           </a> */}
-          <div class="flex md:gap-7 gap-6">
+          <div class="flex items-center md:gap-7 gap-6">
+            <a href="https://github.com/getnimbus/nimbus-ext">
+              <img src={GithubLogo} alt="github" loading="lazy" />
+            </a>
             <a href="https://twitter.com/nimbus_ext">
               <img src={TwitterLogo} alt="twitter" loading="lazy" />
             </a>
-            {/* <a href="#">
-              <img src={DiscordLogo} alt="discord" loading="lazy"/>
-            </a> */}
+            <a href="https://discord.gg/u5b9dTrSTr">
+              <img src={DiscordLogo} alt="discord" loading="lazy" />
+            </a>
           </div>
         </div>
       </div>
