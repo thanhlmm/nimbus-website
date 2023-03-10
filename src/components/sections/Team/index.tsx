@@ -10,20 +10,20 @@ import BinhNguyen from "../../../assets/images/Binh_Nguyen.png";
 export const teams = [
   {
     src: ThanhLe,
-    quote: "”blabla”",
+    quote: '"I believed Web3 is the future, so let\'s buidl it. WAGMI!"',
     name: "Thanh Le, Founder",
   },
   {
     src: ToanNhu,
     quote:
-      "”Drop down all those imaginations and feelings that 'Success is built on Success'. A HERO can be built from ZERO. Begin from where you stand with what you have! Nimbus is the best sidekick for your HERO LEGEND.”",
+      "\"Drop down all those imaginations and feelings that 'Success is built on Success'. A HERO can be built from ZERO. Begin from where you stand with what you have! Nimbus is the best sidekick for your HERO LEGEND.\"",
     name: "Toan Nhu, Co - Founder",
   },
   {
     src: BinhNguyen,
     quote:
-      "”What you create won't be worth anything if you don't try your best to make it. So try my best more and more.”",
-    name: "Binh Nguyen, Co - Founder",
+      "\"What you create won't be worth anything if you don't try your best to make it. So try my best more and more.\"",
+    name: "Binh Nguyen, Software Engineer",
   },
 ];
 
@@ -34,10 +34,7 @@ export default component$(() => {
     <div class="team_container">
       <div class="flex flex-col items-center gap-6 lg:mb-16 mb-10">
         <Title title="Team" />
-        <div class="sub-title">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor amet
-          mauris, scelerisque maecenas viverra vitae turpis bibendum.
-        </div>
+        <div class="sub-title">Meet our solider that makes this happens</div>
       </div>
       <div class="flex flex-col gap-16">
         <div class="flex lg:flex-row flex-col items-center gap-11">
@@ -53,7 +50,7 @@ export default component$(() => {
                   </div>
                 </div>
                 <div class="about_container">
-                  <div class="quote">{item.quote}</div>
+                  <div class="quote font-[400]">{item.quote}</div>
                   <div class="name">{item.name}</div>
                 </div>
               </div>
