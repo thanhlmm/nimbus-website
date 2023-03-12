@@ -34,7 +34,7 @@ export default component$(() => {
     <div class="team_container">
       <div class="flex flex-col items-center gap-6 lg:mb-16 mb-10">
         <Title title="Team" />
-        <div class="sub-title">Meet our solider that makes this happens</div>
+        <div class="sub-title">Meet our soldiers that make this happens</div>
       </div>
       <div class="flex flex-col gap-16">
         <div class="flex lg:flex-row flex-col items-center gap-11">
