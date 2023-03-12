@@ -3,7 +3,7 @@ import styles from "./Team.scss?inline";
 
 import Title from "~/components/Title";
 
-import ThanhLe from "../../../assets/images/Thanh_Le.png";
+import ThanhLe from "../../../assets/images/Thanh_Le2.png";
 import ToanNhu from "../../../assets/images/Toan_Nhu.png";
 import BinhNguyen from "../../../assets/images/Binh_Nguyen.png";
 
