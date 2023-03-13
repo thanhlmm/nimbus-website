@@ -26,7 +26,7 @@ export default component$(() => {
             <a href="https://github.com/getnimbus">
               <img src={GithubLogo} alt="github" loading="lazy" />
             </a>
-            <a href="https://twitter.com/nimbus_ext">
+            <a href="https://twitter.com/get_nimbus">
               <img src={TwitterLogo} alt="twitter" loading="lazy" />
             </a>
             <a href="https://discord.gg/u5b9dTrSTr">
