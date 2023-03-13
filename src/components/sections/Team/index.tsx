@@ -10,13 +10,13 @@ import BinhNguyen from "../../../assets/images/Binh_Nguyen.png";
 export const teams = [
   {
     src: ThanhLe,
-    quote: '"I believed Web3 is the future, so let\'s buidl it. WAGMI!"',
+    quote: '"I believed Web3 is the future, so let\'s BUIDL it. WAGMI!"',
     name: "Thanh Le, Founder",
   },
   {
     src: ToanNhu,
     quote:
-      '"A HERO can be built from ZERO. Begin from where you stand with what you have. Nimbus is best sidekick for your HERO LEGEND."',
+      '"A HERO can be built from ZERO. Begin from where you stand with what you have. Nimbus is the best sidekick for your HERO LEGEND."',
     name: "Toan Nhu, Co - Founder",
   },
   {
