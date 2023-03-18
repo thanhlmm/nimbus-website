@@ -20,8 +20,8 @@
     font-weight: var(--qwik-fw-semibold);
     font-size: var(--qwik-fs-sm);
     line-height: var(--qwik-lh-sm);
-    color: var(--qwik-main-color);
-    background: #a4eeee;
+    color: var(--qwik-white);
+    background: var(--qwik-tosca);
     padding: 4px 10px;
     border-radius: 50px;
     text-align: center;
@@ -43,7 +43,7 @@
 
     .title_container {
       display: flex;
-      justify-content: space-between;
+      gap: 7px;
       align-items: center;
 
       .title {
@@ -89,7 +89,7 @@
       font-size: var(--qwik-fs-xs);
       line-height: var(--qwik-lh-xs);
     }
-    
+
     .card {
       .title_container {
         .title {

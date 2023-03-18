@@ -18,7 +18,7 @@
   --qwik-primary-900: #6b5219;
 
   --qwik-orange: #f97316;
-  --qwik-tosca: #90e6e6;
+  --qwik-tosca: #1E96FC;
 
   --qwik-gray-1: #333333;
   --qwik-gray-3: #828282;
@@ -58,9 +58,8 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  font-family: 'Outfit', sans-serif;
   scroll-behavior: smooth;
+  font-family: 'Golos Text', sans-serif;
 }
  
 a {

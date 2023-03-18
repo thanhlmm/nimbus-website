@@ -7,7 +7,7 @@ import Check from "../../../assets/icons/check.svg";
 export const cards = [
   {
     title: "Current Performance",
-    content: "How is my investment performance? Show cash-flow position",
+    content: "How is my investment performance?\nShow cash-flow position",
   },
   {
     title: "Transaction History",
@@ -29,7 +29,7 @@ export default component$(() => {
 
   return (
     <div class="user_dashboard_container">
-      <div class="main_title lg:hidden block"><span>User Dashboard</span><div><span class="highlight ml-2">Coming soon</span></div></div>
+      <div class="main_title lg:hidden block">User Dashboard</div>
       <div class="flex-1">
         <img
           src={Image}
@@ -39,7 +39,7 @@ export default component$(() => {
         />
       </div>
       <div class="lg:flex-[0.8] flex-1 flex flex-col gap-6">
-        <div class="main_title lg:flex hidden items-center"><span>User Dashboard</span> <span class="highlight ml-2">Coming soon</span></div>
+        <div class="main_title lg:flex hidden items-center">User Dashboard</div>
         {cards.map((item, index) => {
           return (
             <div class="card" key={index}>
@@ -53,7 +53,7 @@ export default component$(() => {
               <div class="flex flex-col md:gap-2 gap-1 flex-1 -mt-1">
                 <div class="title_container">
                   <div class="title">{item.title}</div>
-                  {/* {index === 3 && <div class="highlight">Coming soon</div>} */}
+                  {index === 3 && <div class="highlight">Coming soon</div>}
                 </div>
                 <div class="content whitespace-pre-line">{item.content}</div>
               </div>

@@ -36,7 +36,7 @@
       transition-duration: 150ms;
 
       &:hover {
-        border-color: #41d0d0;
+        border-color: var(--qwik-tosca);
         padding: 0;
       }
 

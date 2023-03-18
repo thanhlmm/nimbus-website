@@ -7,8 +7,7 @@ import Check from "../../../assets/icons/check.svg";
 export const cards = [
   {
     title: "Security Check",
-    content:
-      `Nimbus answer the question: "Is this website safe to use?"`,
+    content: `Nimbus answer the question: ”Is this website safe to use?”; ”Is it a scam website?”`,
   },
   {
     title: "Term Explain",
