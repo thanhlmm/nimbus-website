@@ -14,7 +14,11 @@ export default component$(() => {
       <div class="card_wrapper">
         <div class="card_wrapper_container">
           <div class="title">Be the early pioneers in the new era now</div>
-          <a href="https://forms.gle/9UdAHNbQorYaSmBY8" target="_blank">
+          <a
+            href="https://forms.gle/9UdAHNbQorYaSmBY8"
+            target="_blank"
+            class="z-[2]"
+          >
             <Button
               // data-tf-popup="NXRAWquK"
               // data-tf-size="70"
