@@ -18,7 +18,7 @@ export default component$(() => {
     <div class="hero_wrapper">
       <div class="hero_wrapper_container">
         <div class="flex flex-col gap-8 xl:flex-[0.75] flex-1 lg:order-1 order-2">
-          <Title title="Make Web3 simple for everyone" />
+          <Title title="A personalized Web3 portfolio tool" />
           <a href="https://forms.gle/9UdAHNbQorYaSmBY8" target="_blank">
             <Button
               // data-tf-popup="NXRAWquK"

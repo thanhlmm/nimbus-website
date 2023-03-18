@@ -30,5 +30,5 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Make Web3 simple for everyone - Nimbus",
+  title: "A personalized Web3 portfolio tool - Nimbus",
 };

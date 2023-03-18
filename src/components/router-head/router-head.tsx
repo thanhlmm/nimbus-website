@@ -27,10 +27,10 @@ export const RouterHead = component$(() => {
         rel="stylesheet"
       />
 
-      <meta name="description" content="Make web3 simple for everyone" />
+      <meta name="description" content="A personalized Web3 portfolio tool" />
       <meta
         property="og:title"
-        content="Nimbus - Make web3 simple for everyone"
+        content="Nimbus - A personalized Web3 portfolio tool"
       />
       <meta
         property="og:description"
@@ -38,7 +38,7 @@ export const RouterHead = component$(() => {
       />
       <meta
         property="twitter:title"
-        content="Nimbus - Make web3 simple for everyone"
+        content="Nimbus - A personalized Web3 portfolio tool"
       />
       <meta
         property="twitter:description"
@@ -46,7 +46,7 @@ export const RouterHead = component$(() => {
       />
       <meta
         property="og:title"
-        content="Nimbus - Make web3 simple for everyone"
+        content="Nimbus - A personalized Web3 portfolio tool"
       />
       <meta
         property="og:description"
