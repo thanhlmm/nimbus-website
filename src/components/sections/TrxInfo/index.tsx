@@ -1,14 +1,13 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./TrxInfo.scss?inline";
 
-import Image from "../../../assets/images/trx_info/image.png";
+import Image from "../../../assets/images/trx_info/image.svg";
 import Check from "../../../assets/icons/check.svg";
 
 export const cards = [
   {
     title: "Quick look on any pages",
-    content:
-      "Get information right when you see a transaction, an address",
+    content: "Get information right when you see a transaction, an address",
   },
   {
     title: "Know how value move?",
@@ -17,7 +16,8 @@ export const cards = [
   },
   {
     title: "What's inside an address?",
-    content: "Is this a whale address?\nHow many tokens this address is holding?",
+    content:
+      "Is this a whale address?\nHow many tokens this address is holding?",
   },
 ];
 
