@@ -1,5 +1,5 @@
-.main_btn_container,
-.second_btn_container {
+.primary,
+.secondary {
   color: var(--qwik-white);
   padding: 20px 60px;
   border-radius: 4px;
@@ -19,7 +19,7 @@
   z-index: 2;
 }
 
-.main_btn_container {
+.primary {
   background: var(--qwik-main-color);
   border-color: transparent;
 
@@ -30,7 +30,7 @@
   }
 }
 
-.second_btn_container {
+.secondary {
   background: var(--qwik-tosca);
   border-color: transparent;
 
@@ -41,9 +41,35 @@
   }
 }
 
+.disabled {
+  color: var(--qwik-neutral-400);
+  border: 1px solid transparent;
+
+  &[type="submit"],
+  &[type="button"] {
+    background: var(--qwik-neutral-100);
+  }
+
+  &:hover {
+    color: var(--qwik-neutral-400);
+    border: 1px solid transparent;
+  }
+}
+
+.loading {
+  cursor: wait;
+  opacity: 0.5;
+
+  &:hover {
+    color: var(--qwik-white);
+    background: var(--qwik-main-color);
+    border-color: transparent;
+  }
+}
+
 @media screen and (max-width: 500px) {
-  .main_btn_container,
-  .second_btn_container {
+  .primary,
+  .secondary {
     width: 100%;
     font-size: var(--qwik-fs-base);
     line-height: var(--qwik-lh-base);
