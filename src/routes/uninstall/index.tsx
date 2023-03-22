@@ -24,7 +24,11 @@ export default component$(() => {
     <div class="uninstall_container">
       <div class="content_wrapper">
         <div class="flex flex-col items-center gap-2">
-          <img src={Meme} alt="" class="w-[190px] h-[190px] mb-1" />
+          <img
+            src={Meme}
+            alt=""
+            class="w-[190px] h-[190px] mb-1 rounded-[4px]"
+          />
           <Title title="Sorry to let you go" />
           <div class="sub_title">
             Thank you for giving our extension a try. Your feedback or
