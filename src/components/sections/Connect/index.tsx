@@ -25,7 +25,7 @@ export default component$(() => {
               // data-tf-iframe-props="title=Nimbus waiting list"
               // data-tf-medium="snippet"
               text="Join Beta Test"
-              is_main_btn={false}
+              variant="secondary"
             />
           </a>
           <div class="dot_one">

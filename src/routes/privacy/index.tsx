@@ -19,8 +19,8 @@ export default component$(() => {
               information is collected, used, and disclosed by Nimbus.
             </div>
             <div>
-              This Privacy Policy applies to our website, https://nimbus.io, and
-              its associated subdomains (collectively, our "Service").
+              This Privacy Policy applies to our website, https://getnimbus.io,
+              and its associated subdomains (collectively, our "Service").
             </div>
             <div>
               By accessing or using our Service, you signify that you have read,
@@ -97,7 +97,7 @@ export default component$(() => {
               <li>
                 <span>Website: </span>
                 Nimbus’s site, which can be accessed via this URL:{" "}
-                <a href="https://nimbus.io.">https://nimbus.io.</a>
+                <a href="https://getnimbus.io">https://getnimbus.io</a>
               </li>
               <li>
                 <span>You: </span>a person or entity that is registered with

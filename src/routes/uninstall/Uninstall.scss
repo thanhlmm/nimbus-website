@@ -1,0 +1,32 @@
+.uninstall_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  margin-top: -6.5rem;
+  padding-top: 6.5rem;
+
+  padding: 140px 0 60px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    .sub_title {
+      font-weight: var(--qwik-fw-regular);
+      font-size: var(--qwik-fs-lg);
+      color: var(--qwik-gray-1);
+      width: 60%;
+      text-align: center;
+    }
+  }
+}
