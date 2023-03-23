@@ -1,10 +1,17 @@
-import { component$, useStylesScoped$, useStore, $ } from "@builder.io/qwik";
+import {
+  component$,
+  useStylesScoped$,
+  useWatch$,
+  useStore,
+  $,
+} from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import classNames from "classnames";
 import dayjs from "dayjs";
 
 import Title from "~/components/Title";
 import Button from "~/components/Button";
+import Modal from "~/components/Modal";
 
 import styles from "./Uninstall.scss?inline";
 
@@ -24,6 +31,7 @@ interface HeaderStore {
       msg: string;
     };
   };
+  toggleModal: boolean;
 }
 
 export default component$(() => {
@@ -42,9 +50,21 @@ export default component$(() => {
         msg: "",
       },
     },
+    toggleModal: false,
   });
 
-  const Submit = $(async () => {
+  useWatch$(({ track }) => {
+    track(state, "toggleModal");
+    if (typeof window !== "undefined") {
+      if (state.toggleModal) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "unset";
+      }
+    }
+  });
+
+  const handleSubmit = $(async () => {
     const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     const form = {
       date: dayjs(new Date()).format("DD/MM/YYYY - HH:mm"),
@@ -113,7 +133,7 @@ export default component$(() => {
         </div>
         <form
           preventdefault:submit
-          onSubmit$={Submit}
+          onSubmit$={handleSubmit}
           class="flex flex-col items-end gap-5"
         >
           <div class="flex flex-col gap-4">
@@ -133,7 +153,7 @@ export default component$(() => {
                   }
                 }}
                 class={classNames(
-                  "border border-[#27326F] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:outline-none p-4 w-full",
+                  "border border-[#E0E0E0] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:border-[#27326F] focus:border focus:outline-none py-3 px-4 w-full",
                   {
                     ["border-red-500"]: state.errors.email.required,
                   }
@@ -163,7 +183,7 @@ export default component$(() => {
                   }
                 }}
                 class={classNames(
-                  "border border-[#27326F] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:outline-none p-4 w-full",
+                  "border border-[#E0E0E0] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:border-[#27326F] focus:border focus:outline-none py-3 px-4 w-full",
                   {
                     ["border-red-500"]: state.errors.feedback.required,
                   }
@@ -178,7 +198,22 @@ export default component$(() => {
           </div>
           <Button text="Send" type="submit" />
         </form>
+        <div
+          class="border border-red-500 p-4 cursor-pointer"
+          onClick$={() => (state.toggleModal = true)}
+        >
+          Open modal
+        </div>
       </div>
+      {state.toggleModal && (
+        <Modal
+          handleClose$={() => {
+            state.toggleModal = false;
+          }}
+        >
+          hello there
+        </Modal>
+      )}
     </div>
   );
 });
