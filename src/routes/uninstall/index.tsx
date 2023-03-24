@@ -26,7 +26,7 @@ export default component$(() => {
   const state = useStore<StoreType>({
     feedback: "",
     email: "",
-    isLoading: true,
+    isLoading: false,
     openToast: false,
     validateEmail: false,
     validateFeedback: false,
