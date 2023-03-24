@@ -111,7 +111,8 @@ export default component$(() => {
         <form
           preventdefault:submit
           onSubmit$={handleSubmit}
-          class="flex flex-col items-end"
+          class="flex flex-col items-end py-4 px-6 bg-white rounded-[20px]"
+          style="box-shadow: 0px 4px 20px 0px #00000026;"
         >
           <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-1">
@@ -125,7 +126,7 @@ export default component$(() => {
                   }
                 }}
                 class={classNames(
-                  "border border-[#E0E0E0] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:border-[#27326F] focus:border focus:outline-none py-3 px-4 w-full",
+                  "border border-[#00000014] placeholder-[#666666] text-[#666666] rounded-[5px] focus:border-[#27326F] focus:border focus:outline-none p-3 w-full text-base",
                   {
                     ["border-red-500"]: state.validateEmail,
                   }
@@ -156,7 +157,7 @@ export default component$(() => {
                   }
                 }}
                 class={classNames(
-                  "border border-[#E0E0E0] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:border-[#27326F] focus:border focus:outline-none py-3 px-4 w-full",
+                  "border border-[#00000014] placeholder-[#666666] text-[#666666] rounded-[5px] focus:border-[#27326F] focus:border focus:outline-none p-3 w-full text-base",
                   {
                     ["border-red-500"]: state.validateFeedback,
                   }
