@@ -1,67 +1,36 @@
-import {
-  component$,
-  useStylesScoped$,
-  useWatch$,
-  useStore,
-  $,
-} from "@builder.io/qwik";
+import { component$, useStylesScoped$, useStore, $ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import classNames from "classnames";
 import dayjs from "dayjs";
 
 import Title from "~/components/Title";
 import Button from "~/components/Button";
-import Modal from "~/components/Modal";
+import Toast from "~/components/Toast";
 
 import styles from "./Uninstall.scss?inline";
 
 import Meme from "../../assets/images/delete.gif";
 
-interface HeaderStore {
+interface StoreType {
   feedback: string;
   email: string;
   isLoading: boolean;
-  errors: {
-    email: {
-      required: boolean;
-      msg: string;
-    };
-    feedback: {
-      required: boolean;
-      msg: string;
-    };
-  };
-  toggleModal: boolean;
+  openToast: boolean;
+  validateEmail: boolean;
+  validateFeedback: boolean;
+  isSuccess: boolean;
 }
 
 export default component$(() => {
   useStylesScoped$(styles);
-  const state = useStore<HeaderStore>({
+  const state = useStore<StoreType>({
     feedback: "",
     email: "",
     isLoading: false,
-    errors: {
-      email: {
-        required: false,
-        msg: "",
-      },
-      feedback: {
-        required: false,
-        msg: "",
-      },
-    },
-    toggleModal: false,
-  });
-
-  useWatch$(({ track }) => {
-    track(state, "toggleModal");
-    if (typeof window !== "undefined") {
-      if (state.toggleModal) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "unset";
-      }
-    }
+    openToast: false,
+    validateEmail: false,
+    validateFeedback: false,
+    isSuccess: false,
   });
 
   const handleSubmit = $(async () => {
@@ -72,28 +41,20 @@ export default component$(() => {
       feedback: state.feedback,
     };
 
-    console.log("form: ", form);
-
     if (form.feedback === "") {
-      state.errors.feedback = {
-        required: true,
-        msg: "Feedback is required",
-      };
+      state.validateFeedback = true;
       return;
     }
 
     if (form.email && !regexEmail.test(form.email)) {
-      state.errors.email = {
-        required: true,
-        msg: "Email is not valid",
-      };
+      state.validateEmail = true;
       return;
     }
 
     state.isLoading = true;
     try {
       const res = fetch(
-        "https://aej6ifjhkj.execute-api.us-east-1.amazonaws.com/feedbacks",
+        "https://aej6ifjhkj.execute-api.us-east-1.amazonaws.com/feedback",
         {
           method: "POST",
           headers: {
@@ -103,14 +64,31 @@ export default component$(() => {
           body: JSON.stringify(form),
         }
       );
-
       const dataRes = await res;
-      console.log("dataRes: ", dataRes);
+
+      if (dataRes.status === 200) {
+        state.isSuccess = true;
+        state.openToast = true;
+        setTimeout(() => {
+          state.openToast = false;
+        }, 3000);
+      } else {
+        state.isSuccess = false;
+        state.openToast = true;
+        setTimeout(() => {
+          state.openToast = false;
+        }, 3000);
+      }
 
       state.email = "";
       state.feedback = "";
     } catch (e) {
       console.log("e: ", e);
+      state.isSuccess = false;
+      state.openToast = true;
+      setTimeout(() => {
+        state.openToast = false;
+      }, 3000);
     } finally {
       state.isLoading = false;
     }
@@ -141,28 +119,21 @@ export default component$(() => {
               <input
                 placeholder="Let us know your email (optional)"
                 value={state.email}
-                onInput$={(ev) =>
-                  (state.email = (ev.target as HTMLTextAreaElement).value)
-                }
-                onBlur$={(ev) => {
+                onInput$={(ev) => {
+                  state.email = (ev.target as HTMLTextAreaElement).value;
                   if ((ev.target as HTMLTextAreaElement).value) {
-                    state.errors.email = {
-                      required: false,
-                      msg: "",
-                    };
+                    state.validateEmail = false;
                   }
                 }}
                 class={classNames(
                   "border border-[#E0E0E0] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:border-[#27326F] focus:border focus:outline-none py-3 px-4 w-full",
                   {
-                    ["border-red-500"]: state.errors.email.required,
+                    ["border-red-500"]: state.validateEmail,
                   }
                 )}
               />
-              {state.errors.email.required && (
-                <div class="text-red-500 font-medium">
-                  {state.errors.email.msg}
-                </div>
+              {state.validateEmail && (
+                <div class="text-red-500 font-medium">Email invalid</div>
               )}
             </div>
             <div class="flex flex-col gap-1">
@@ -171,48 +142,41 @@ export default component$(() => {
                 cols={80}
                 placeholder="Leave some feedback here"
                 value={state.feedback}
-                onInput$={(ev) =>
-                  (state.feedback = (ev.target as HTMLTextAreaElement).value)
-                }
-                onBlur$={(ev) => {
+                onInput$={(ev) => {
+                  state.feedback = (ev.target as HTMLTextAreaElement).value;
                   if ((ev.target as HTMLTextAreaElement).value) {
-                    state.errors.feedback = {
-                      required: false,
-                      msg: "",
-                    };
+                    state.validateFeedback = false;
                   }
                 }}
                 class={classNames(
                   "border border-[#E0E0E0] placeholder-[#676e81] text-[#676e81] rounded-[4px] focus:border-[#27326F] focus:border focus:outline-none py-3 px-4 w-full",
                   {
-                    ["border-red-500"]: state.errors.feedback.required,
+                    ["border-red-500"]: state.validateFeedback,
                   }
                 )}
               />
-              {state.errors.feedback.required && (
-                <div class="text-red-500 font-medium">
-                  {state.errors.feedback.msg}
-                </div>
+              {state.validateFeedback && (
+                <div class="text-red-500 font-medium">Feedback is required</div>
               )}
             </div>
           </div>
-          <Button text="Send" type="submit" />
+          <Button
+            text="Send"
+            type="submit"
+            isLoading={state.isLoading || false}
+          />
         </form>
-        <div
-          class="border border-red-500 p-4 cursor-pointer"
-          onClick$={() => (state.toggleModal = true)}
-        >
-          Open modal
-        </div>
       </div>
-      {state.toggleModal && (
-        <Modal
-          handleClose$={() => {
-            state.toggleModal = false;
-          }}
-        >
-          hello there
-        </Modal>
+      {state.openToast && (
+        <Toast
+          message={`${
+            state.isSuccess
+              ? "Thank you for your feedback!"
+              : "It seems like we have trouble with out server. Please try again"
+          }`}
+          type={`${state.isSuccess ? "success" : "fail"}`}
+          isShow={state.openToast}
+        />
       )}
     </div>
   );
