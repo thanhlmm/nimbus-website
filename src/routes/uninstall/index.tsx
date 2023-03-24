@@ -111,8 +111,7 @@ export default component$(() => {
         <form
           preventdefault:submit
           onSubmit$={handleSubmit}
-          class="flex flex-col items-end py-4 px-6 bg-white rounded-[20px]"
-          style="box-shadow: 0px 4px 20px 0px #00000026;"
+          class="flex flex-col items-end"
         >
           <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-1">
