@@ -1,5 +1,5 @@
 .toast {
-  background: white;
+  background: var(--qwik-white);
   padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -17,7 +17,7 @@
 
   .symbol {
     font-size: var(--qwik-fs-xl);
-    color: white;
+    color: var(--qwik-white);
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -27,11 +27,11 @@
   }
 
   .symbol.success {
-    background: #00f593;
+    background: var(--qwik-green);
   }
 
   .symbol.fail {
-    background: #ff0033;
+    background: var(--qwik-red);
   }
 
   .message {
