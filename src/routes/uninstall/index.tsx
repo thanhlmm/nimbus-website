@@ -117,7 +117,7 @@ export default component$(() => {
           <div class="flex flex-col gap-4">
             <div class="flex flex-col gap-1">
               <input
-                placeholder="Let us know your email (optional)"
+                placeholder="Your email (Optional), we might notify you when we have a better version"
                 value={state.email}
                 onInput$={(ev) => {
                   state.email = (ev.target as HTMLTextAreaElement).value;
@@ -140,7 +140,7 @@ export default component$(() => {
               <textarea
                 rows={10}
                 cols={80}
-                placeholder="Leave some feedback here"
+                placeholder="Anything that bored you? We will improve it"
                 value={state.feedback}
                 onInput$={(ev) => {
                   state.feedback = (ev.target as HTMLTextAreaElement).value;
