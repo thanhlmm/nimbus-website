@@ -26,7 +26,7 @@ export default component$(() => {
   const state = useStore<StoreType>({
     feedback: "",
     email: "",
-    isLoading: false,
+    isLoading: true,
     openToast: false,
     validateEmail: false,
     validateFeedback: false,
@@ -72,6 +72,8 @@ export default component$(() => {
         setTimeout(() => {
           state.openToast = false;
         }, 3000);
+        state.email = "";
+        state.feedback = "";
       } else {
         state.isSuccess = false;
         state.openToast = true;
@@ -79,9 +81,6 @@ export default component$(() => {
           state.openToast = false;
         }, 3000);
       }
-
-      state.email = "";
-      state.feedback = "";
     } catch (e) {
       console.log("e: ", e);
       state.isSuccess = false;
@@ -112,9 +111,9 @@ export default component$(() => {
         <form
           preventdefault:submit
           onSubmit$={handleSubmit}
-          class="flex flex-col items-end gap-5"
+          class="flex flex-col items-end"
         >
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-1">
               <input
                 placeholder="Your email (Optional), we might notify you when we have a better version"
@@ -132,11 +131,19 @@ export default component$(() => {
                   }
                 )}
               />
-              {state.validateEmail && (
-                <div class="text-red-500 font-medium">Email invalid</div>
-              )}
+              <div
+                class={classNames("text-red-500", {
+                  ["opacity-0"]: !state.validateEmail,
+                })}
+              >
+                Email invalid
+              </div>
             </div>
-            <div class="flex flex-col gap-1">
+            <div
+              class={classNames("flex flex-col gap-1", {
+                ["transform -translate-y-3"]: !state.validateEmail,
+              })}
+            >
               <textarea
                 rows={10}
                 cols={80}
@@ -155,15 +162,20 @@ export default component$(() => {
                   }
                 )}
               />
-              {state.validateFeedback && (
-                <div class="text-red-500 font-medium">Feedback is required</div>
-              )}
+              <div
+                class={classNames("text-red-500", {
+                  ["opacity-0"]: !state.validateFeedback,
+                })}
+              >
+                Feedback is required
+              </div>
             </div>
           </div>
           <Button
             text="Send"
             type="submit"
             isLoading={state.isLoading || false}
+            className="-mt-3"
           />
         </form>
       </div>

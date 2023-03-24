@@ -1,8 +1,6 @@
 import { component$, useStylesScoped$, PropFunction } from "@builder.io/qwik";
 import classNames from "classnames";
 
-import Loading from "../Loading";
-
 import styles from "./Button.scss?inline";
 
 interface Props {
@@ -41,7 +39,7 @@ export default component$(
         disabled={disabled || isLoading}
         class={btnContainer}
       >
-        {isLoading && <Loading />}
+        {isLoading && <div class="loader" />}
         {text}
       </button>
     );
