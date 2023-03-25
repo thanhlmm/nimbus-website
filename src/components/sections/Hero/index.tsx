@@ -24,42 +24,39 @@ export default component$(() => {
           </a>
           <div class="flex flex-col gap-3 md:mt-10 mt-2">
             <div class="title">Quality Data From</div>
-            <div class="grid grid-cols-4 items-center gap-4">
-              <img
-                src={CoingeckoLogo}
-                alt="Coingecko"
-                class="object-contain w-full h-full"
-                width={"100%"}
-                height={"100%"}
-              />
-              {/* <img
-                src={DebankLogo}
-                alt="Debank"
-                class="object-contain w-full h-full"
-                width={"100%"}
-                height={"100%"}
-              /> */}
-              <img
-                src={BlockPI}
-                alt="BlockPI"
-                class="object-contain w-full h-full"
-                width={"100%"}
-                height={"100%"}
-              />
-              <img
-                src={AnkrLogo}
-                alt="Ankr"
-                class="object-contain w-full h-full"
-                width={"100%"}
-                height={"100%"}
-              />
-              <img
-                src={CovalentLogo}
-                alt="Covalent"
-                class="object-contain w-full h-full"
-                width={"100%"}
-                height={"100%"}
-              />
+            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-4 md:mt-0 mt-3">
+              <div class="grid grid-cols-2 items-center gap-4">
+                <img
+                  src={CoingeckoLogo}
+                  alt="Coingecko"
+                  class="object-contain w-full h-full"
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <img
+                  src={BlockPI}
+                  alt="BlockPI"
+                  class="object-contain w-full h-full"
+                  width={"100%"}
+                  height={"100%"}
+                />
+              </div>
+              <div class="grid grid-cols-2 items-center gap-4">
+                <img
+                  src={CovalentLogo}
+                  alt="Covalent"
+                  class="object-contain w-full h-full"
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <img
+                  src={AnkrLogo}
+                  alt="Ankr"
+                  class="object-contain w-full h-full"
+                  width={"100%"}
+                  height={"100%"}
+                />
+              </div>
             </div>
           </div>
         </div>

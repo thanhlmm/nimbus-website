@@ -46,9 +46,14 @@
   .connect_container {
     .card_wrapper {
       &_container {
+        gap: 2rem;
+
         .title {
           flex: 1;
+          font-size: 38px;
+          line-height: 48.4px;
         }
+
         .dot_two {
           bottom: -30px;
         }
@@ -64,7 +69,6 @@
 
       &_container {
         flex-direction: column;
-        gap: 2rem;
 
         .dot_two {
           bottom: -50px;

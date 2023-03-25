@@ -115,22 +115,33 @@ export default component$(() => {
         >
           <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-1">
-              <input
-                placeholder="Your email (Optional), we might notify you when we have a better version"
-                value={state.email}
-                onInput$={(ev) => {
-                  state.email = (ev.target as HTMLTextAreaElement).value;
-                  if ((ev.target as HTMLTextAreaElement).value) {
-                    state.validateEmail = false;
-                  }
-                }}
+              <div
                 class={classNames(
-                  "border border-[#00000014] placeholder-[#666666] text-[#666666] rounded-[5px] focus:border-[#27326F] focus:border focus:outline-none p-3 w-full text-base",
+                  "flex flex-col gap-1 border border-[#00000014] placeholder-[#666666] text-[#666666] rounded-[5px] py-[6px] px-3 w-full text-base",
                   {
                     ["border-red-500"]: state.validateEmail,
+                    ["bg-[#F0F2F7]"]: state.email,
                   }
                 )}
-              />
+              >
+                <div class="text-[#333333]">Email (Optional)</div>
+                <input
+                  placeholder="We might notify you when we have a better version"
+                  value={state.email}
+                  onInput$={(ev) => {
+                    state.email = (ev.target as HTMLTextAreaElement).value;
+                    if ((ev.target as HTMLTextAreaElement).value) {
+                      state.validateEmail = false;
+                    }
+                  }}
+                  class={classNames(
+                    "border-none focus:outline-none focus:ring-0",
+                    {
+                      ["bg-[#F0F2F7]"]: state.email,
+                    }
+                  )}
+                />
+              </div>
               <div
                 class={classNames("text-red-500", {
                   ["opacity-0"]: !state.validateEmail,
@@ -140,28 +151,39 @@ export default component$(() => {
               </div>
             </div>
             <div
-              class={classNames("flex flex-col gap-1", {
+              class={classNames({
                 ["transform -translate-y-3"]: !state.validateEmail,
               })}
             >
-              <textarea
-                rows={10}
-                cols={80}
-                placeholder="Anything that bored you? We will improve it"
-                value={state.feedback}
-                onInput$={(ev) => {
-                  state.feedback = (ev.target as HTMLTextAreaElement).value;
-                  if ((ev.target as HTMLTextAreaElement).value) {
-                    state.validateFeedback = false;
-                  }
-                }}
+              <div
                 class={classNames(
-                  "border border-[#00000014] placeholder-[#666666] text-[#666666] rounded-[5px] focus:border-[#27326F] focus:border focus:outline-none p-3 w-full text-base",
+                  "flex flex-col gap-1 border border-[#00000014] placeholder-[#666666] text-[#666666] rounded-[5px] py-[6px] px-3 w-full text-base",
                   {
                     ["border-red-500"]: state.validateFeedback,
+                    ["bg-[#F0F2F7]"]: state.feedback,
                   }
                 )}
-              />
+              >
+                <div class="text-[#333333]">Feedback</div>
+                <textarea
+                  rows={10}
+                  cols={80}
+                  placeholder="Anything that bored you? We will improve it"
+                  value={state.feedback}
+                  onInput$={(ev) => {
+                    state.feedback = (ev.target as HTMLTextAreaElement).value;
+                    if ((ev.target as HTMLTextAreaElement).value) {
+                      state.validateFeedback = false;
+                    }
+                  }}
+                  class={classNames(
+                    "border-none focus:outline-none focus:ring-0",
+                    {
+                      ["bg-[#F0F2F7]"]: state.feedback,
+                    }
+                  )}
+                />
+              </div>
               <div
                 class={classNames("text-red-500", {
                   ["opacity-0"]: !state.validateFeedback,
