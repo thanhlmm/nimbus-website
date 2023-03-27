@@ -71,7 +71,8 @@
         margin-bottom: 8px;
       }
 
-      .name {
+      .name,
+      .position {
         font-weight: var(--qwik-fw-regular);
         font-size: var(--qwik-fs-lg);
         line-height: var(--qwik-lh-lg);
