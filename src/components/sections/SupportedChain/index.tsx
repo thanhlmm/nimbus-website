@@ -18,7 +18,7 @@ export default component$(() => {
       <div class="flex justify-center">
         <div class="main_title">Supported Chain</div>
       </div>
-      <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center mt-9">
+      {/* <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center mt-9">
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Ethereum} alt="Ethereum" loading="lazy" />
         </div>
@@ -40,11 +40,14 @@ export default component$(() => {
             loading="lazy"
           />
         </div>
+      </div> */}
+      <div class="flex justify-center scale-100 hover:scale-110 transition-all mt-9">
+        <img src={Ethereum} alt="Ethereum" loading="lazy" />
       </div>
       <div class="flex justify-center my-8">
         <div class="sub_title">And many more soon...</div>
       </div>
-      <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center">
+      {/* <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-6 items-center">
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Solona} alt="Solona" loading="lazy" />
         </div>
@@ -62,7 +65,7 @@ export default component$(() => {
         <div class="flex justify-center scale-100 hover:scale-110 transition-all">
           <img src={Near} alt="Near" loading="lazy" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 });
