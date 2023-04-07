@@ -54,7 +54,7 @@ export default component$(() => {
     state.isLoading = true;
     try {
       const res = fetch(
-        "https://aej6ifjhkj.execute-api.us-east-1.amazonaws.com/feedback",
+        "https://l6s5o2dq4a.execute-api.ap-southeast-1.amazonaws.com/feedback",
         {
           method: "POST",
           headers: {
