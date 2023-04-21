@@ -53,17 +53,14 @@ export default component$(() => {
 
     state.isLoading = true;
     try {
-      const res = fetch(
-        "https://l6s5o2dq4a.execute-api.ap-southeast-1.amazonaws.com/feedback",
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
-        }
-      );
+      const res = fetch("https://api.getnimbus.io/feedback", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
       const dataRes = await res;
 
       if (dataRes.status === 200) {
