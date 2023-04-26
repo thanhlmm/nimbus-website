@@ -79,8 +79,13 @@ export default component$(() => {
             >
               Home
             </a>
-            {/* <div class="link">Transaction Explain</div>
-            <div class="link">Blog</div> */}
+            {/* <div class="link">Transaction Explain</div> */}
+            <a
+              href="/blogs"
+              class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
+            >
+              Blogs
+            </a>
           </div>
         </div>
       </header>
