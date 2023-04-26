@@ -37,6 +37,7 @@ export default component$(() => {
               data-aos="fade-right"
               data-aos-duration="500"
               data-aos-delay={index === 0 ? "0" : index === 1 ? "500" : "1000"}
+              data-aos-once="true"
             />
           </span>
           {index === 2 && (
@@ -48,6 +49,7 @@ export default component$(() => {
               data-aos-delay="1800"
               data-aos-duration="1500"
               loading="lazy"
+              data-aos-once="true"
             />
           )}
           <p class="content">{card.content}</p>

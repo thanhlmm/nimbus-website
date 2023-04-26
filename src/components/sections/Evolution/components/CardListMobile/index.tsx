@@ -39,6 +39,7 @@ export default component$(() => {
                 alt="rocket"
                 class="wow bounceInDown rocket-img w-full object-contain"
                 data-wow-duration="2s"
+                data-wow-iteration="1"
                 loading="lazy"
               />
             )}
