@@ -2,7 +2,7 @@ import {
   component$,
   useStylesScoped$,
   useStore,
-  // useClientEffect$,
+  useClientEffect$,
   $,
 } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
@@ -10,7 +10,6 @@ import dayjs from "dayjs";
 
 import Title from "~/components/Title";
 import Blog from "~/components/Blog";
-import { QGreetings } from "../react/index";
 
 import styles from "./Blogs.scss?inline";
 
@@ -66,14 +65,13 @@ export default component$(() => {
     }
   );
 
-  // useClientEffect$(async () => {
-  //   state.posts = await getAllPosts({ locale: "en" });
-  // });
+  useClientEffect$(async () => {
+    state.posts = await getAllPosts({ locale: "en" });
+  });
 
   return (
     <div class="blogs_container">
       <Title title="Blogs" />
-      <QGreetings />
       <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
         {state.posts.map((item: Post) => {
           return (
