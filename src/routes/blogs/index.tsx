@@ -2,7 +2,7 @@ import {
   component$,
   useStylesScoped$,
   useStore,
-  useClientEffect$,
+  useTask$,
   $,
 } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
@@ -65,7 +65,7 @@ export default component$(() => {
     }
   );
 
-  useClientEffect$(async () => {
+  useTask$(async () => {
     state.posts = await getAllPosts({ locale: "en" });
   });
 

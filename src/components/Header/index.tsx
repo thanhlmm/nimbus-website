@@ -2,8 +2,7 @@ import {
   component$,
   useStylesScoped$,
   useStore,
-  useClientEffect$,
-  useWatch$,
+  useTask$,
 } from "@builder.io/qwik";
 import classNames from "classnames";
 
@@ -25,8 +24,8 @@ export default component$(() => {
     isOpen: false,
   });
 
-  useWatch$(({ track }) => {
-    track(state, "isOpen");
+  useTask$(({ track }) => {
+    track(() => state.isOpen);
     if (typeof window !== "undefined") {
       if (state.isOpen) {
         document.body.style.overflow = "hidden";
@@ -36,16 +35,18 @@ export default component$(() => {
     }
   });
 
-  useClientEffect$(() => {
-    const lastScrollY = window.pageYOffset;
-    const handleCheckIsSticky = () => {
-      const scrollY = window.pageYOffset;
-      state.isSticky = scrollY > lastScrollY ? "sticky" : "";
-    };
-    window.addEventListener("scroll", handleCheckIsSticky);
-    return () => {
-      window.removeEventListener("scroll", handleCheckIsSticky);
-    };
+  useTask$(() => {
+    if (typeof window !== "undefined") {
+      const lastScrollY = window.pageYOffset;
+      const handleCheckIsSticky = () => {
+        const scrollY = window.pageYOffset;
+        state.isSticky = scrollY > lastScrollY ? "sticky" : "";
+      };
+      window.addEventListener("scroll", handleCheckIsSticky);
+      return () => {
+        window.removeEventListener("scroll", handleCheckIsSticky);
+      };
+    }
   });
 
   const headerWrapperStyle = classNames("header_wrapper", {
