@@ -95,10 +95,6 @@ a {
   gap: 2rem;
 }
 
-.notion-aside {
-  width: 180px;
-}
-
 .notion-aside-table-of-contents {
   width: 100%;
 }
@@ -109,6 +105,16 @@ a {
 
 .notion-header {
   display: none;
+}
+
+.notion-page-scroller {
+  margin-right: 26rem;
+}
+
+@media screen and (max-width: 1299px) {
+  .notion-page-scroller {
+    margin-right: 0rem;
+  }
 }
 
 @tailwind base;

@@ -8,7 +8,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { useLocation } from "@builder.io/qwik-city";
 import { NotionAPI } from "notion-client";
 
-import { QReactNotionBlogPage } from "~/integrations/react";
+import { QReactNotionBlogPage } from "~/integrations/blog";
 import { getAllPosts } from "..";
 
 import styles from "../Blogs.scss?inline";
