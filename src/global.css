@@ -86,6 +86,31 @@ a {
   background: #27326f;
 }
 
+.notion-page {
+  width: 100%;
+}
+
+.notion-page-content {
+  width: 100%;
+  gap: 2rem;
+}
+
+.notion-aside {
+  width: 180px;
+}
+
+.notion-aside-table-of-contents {
+  width: 100%;
+}
+
+.notion-asset-caption {
+  text-align: center;
+}
+
+.notion-header {
+  display: none;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

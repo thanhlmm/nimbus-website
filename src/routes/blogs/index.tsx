@@ -18,10 +18,14 @@ interface StoreType {
 }
 
 type PostStatus = "Published" | "Draft";
-type Post = {
+export type Post = {
   id: string;
   slug: string;
   title: string;
+  author: {
+    fullName: string;
+    profilePhoto: string;
+  }[];
   date: string;
   tag: string[];
   status: PostStatus;
@@ -34,36 +38,36 @@ type Post = {
   }[];
 };
 
+export const getAllPosts = $(
+  async ({ locale = "", includeDraft = false }): Promise<Post[]> => {
+    return await fetch(
+      `https://notion.thanhle.workers.dev/v1/table/c0a9456d6fa04bb2af554a310ac7b5ff`
+    )
+      .then((res) => res.json())
+      .then((res) =>
+        res
+          .filter((row: Post) => includeDraft || row.status === "Published")
+          .filter((row: Post) => {
+            return locale
+              ? row.linkRelatived
+                ? row.lang === locale
+                : true
+              : true;
+          })
+          .sort(
+            (a: Post, b: Post) =>
+              dayjs(b.date, "YYYY-MM-DD").unix() -
+              dayjs(a.date, "YYYY-MM-DD").unix()
+          )
+      );
+  }
+);
+
 export default component$(() => {
   useStylesScoped$(styles);
   const state = useStore<StoreType>({
     posts: [],
   });
-
-  const getAllPosts = $(
-    async ({ locale = "", includeDraft = false }): Promise<Post[]> => {
-      return await fetch(
-        `https://notion.thanhle.workers.dev/v1/table/c0a9456d6fa04bb2af554a310ac7b5ff`
-      )
-        .then((res) => res.json())
-        .then((res) =>
-          res
-            .filter((row: Post) => includeDraft || row.status === "Published")
-            .filter((row: Post) => {
-              return locale
-                ? row.linkRelatived
-                  ? row.lang === locale
-                  : true
-                : true;
-            })
-            .sort(
-              (a: Post, b: Post) =>
-                dayjs(b.date, "YYYY-MM-DD").unix() -
-                dayjs(a.date, "YYYY-MM-DD").unix()
-            )
-        );
-    }
-  );
 
   useTask$(async () => {
     state.posts = await getAllPosts({ locale: "en" });
@@ -79,9 +83,13 @@ export default component$(() => {
               title={item.title}
               sub_title={item.description || ""}
               time={dayjs(item.date).format("MMM DD, YYYY")}
-              author="Binh Nguyen"
-              image="https://assets.coingecko.com/article-images/869342.jpg"
-              id={item.id}
+              author={item.author}
+              image={
+                item.hero_image
+                  ? item?.hero_image[0].url
+                  : "https://assets.coingecko.com/article-images/869342.jpg"
+              }
+              slug={item.slug}
             />
           );
         })}
