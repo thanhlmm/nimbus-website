@@ -6,6 +6,7 @@ import { qwikReact } from "@builder.io/qwik-react/vite";
 
 export default defineConfig(() => {
   return {
+    ssr: { target: "node", format: "cjs" },
     plugins: [qwikCity(), qwikVite(), tsconfigPaths(), qwikReact()],
     preview: {
       headers: {

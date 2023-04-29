@@ -86,34 +86,105 @@ a {
   background: #27326f;
 }
 
-.notion-page {
+.notion-frame {
+  align-items: center;
+}
+
+.notion-frame .notion-header {
+  display: none;
+}
+
+.notion-frame .notion-page-scroller {
   width: 100%;
 }
 
-.notion-page-content {
-  width: 100%;
-  gap: 2rem;
+.notion-frame .notion-page-scroller .notion-page {
+  width: 100% !important;
+  padding: 0 !important;
 }
 
-.notion-aside-table-of-contents {
+.notion-frame .notion-page-scroller .notion-page .notion-page-content {
   width: 100%;
+  gap: 1rem;
+}
+
+.notion-frame
+  .notion-page-scroller
+  .notion-page
+  .notion-page-content
+  .notion-page-content-inner {
+  flex: 1 !important;
+}
+
+.notion-frame
+  .notion-page-scroller
+  .notion-page
+  .notion-page-content
+  .notion-aside {
+  flex: 0.6 !important;
+  max-width: 500px;
+}
+
+.notion-frame
+  .notion-page-scroller
+  .notion-page
+  .notion-page-content
+  .notion-aside
+  .notion-aside-table-of-contents {
+  width: 100%;
+}
+
+.notion-frame
+  .notion-page-scroller
+  .notion-page
+  .notion-page-content
+  .notion-aside
+  .notion-aside-table-of-contents
+  a
+  span {
+  width: 480px;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .notion-asset-caption {
   text-align: center;
 }
 
-.notion-header {
-  display: none;
+.notion-title {
+  font-weight: var(--qwik-fw-semibold);
+  font-size: 46px;
+  line-height: 57.2px;
+  color: var(--qwik-main-color);
+  margin-bottom: 40px !important;
 }
 
-.notion-page-scroller {
-  margin-right: 26rem;
+@media screen and (max-width: 1024px) {
+  .notion-title {
+    font-size: 44px;
+    line-height: 54.2px;
+  }
 }
 
-@media screen and (max-width: 1299px) {
-  .notion-page-scroller {
-    margin-right: 0rem;
+@media screen and (max-width: 900px) {
+  .notion-title {
+    font-size: 34px;
+    line-height: 47.2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .notion-title {
+    font-size: 39px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .notion-title {
+    font-size: 34px;
+    line-height: 44.2px;
   }
 }
 

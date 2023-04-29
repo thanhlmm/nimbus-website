@@ -1,6 +1,6 @@
 /** @jsxImportSource react */
 import { qwikify$ } from "@builder.io/qwik-react";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { NotionRenderer } from "react-notion-x";
 import { Tweet } from "react-twitter-widgets";
 import { Modal } from "react-notion-x/build/third-party/modal";
@@ -19,20 +19,18 @@ const Code = lazy(() =>
 
 function ReactNotionBlogPage({ block }: { block: any }) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <NotionRenderer
-        components={{
-          Code,
-          Tweet: TweetRender,
-          Modal,
-        }}
-        recordMap={JSON.parse(block)}
-        fullPage={true}
-        darkMode={false}
-        showTableOfContents
-        minTableOfContentsItems={3}
-      />
-    </Suspense>
+    <NotionRenderer
+      components={{
+        Code,
+        Tweet: TweetRender,
+        Modal,
+      }}
+      recordMap={JSON.parse(block)}
+      fullPage={true}
+      darkMode={false}
+      showTableOfContents
+      minTableOfContentsItems={3}
+    />
   );
 }
 
