@@ -33,7 +33,7 @@ export default component$((props: Props) => {
             </a>
             {/* <div class="link">Transaction Explain</div> */}
             <a href="/blogs" class="link">
-              Blog
+              Blogs
             </a>
           </div>
         </div>

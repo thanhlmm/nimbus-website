@@ -26,7 +26,7 @@ function ReactNotionBlogPage({ block }: { block: any }) {
           Tweet: TweetRender,
           Modal,
         }}
-        recordMap={block}
+        recordMap={block.data}
         fullPage={true}
         darkMode={false}
         showTableOfContents={false}

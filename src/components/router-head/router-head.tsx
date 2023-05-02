@@ -44,14 +44,7 @@ export const RouterHead = component$(() => {
         property="twitter:description"
         content="Nimubs is a lifestyle app that help everyone understand & take profit in Web3 space."
       />
-      <meta
-        property="og:title"
-        content="Nimbus - A personalized Web3 portfolio tool"
-      />
-      <meta
-        property="og:description"
-        content="Nimubs is a lifestyle app that help everyone understand & take profit in Web3 space."
-      />
+
       <meta property="og:image" content="/hero.png" />
 
       {head.meta.map((m) => (

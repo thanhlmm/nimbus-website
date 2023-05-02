@@ -161,6 +161,10 @@ a {
   margin-bottom: 40px !important;
 }
 
+.notion-hash-link {
+  margin-top: 10px !important;
+}
+
 @media screen and (max-width: 1024px) {
   .notion-title {
     font-size: 44px;
