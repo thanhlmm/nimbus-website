@@ -1,21 +1,11 @@
-import {
-  component$,
-  useStylesScoped$,
-  useStore,
-  useTask$,
-  $,
-} from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$, useStylesScoped$, $ } from "@builder.io/qwik";
+import { DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
 import dayjs from "dayjs";
 
 import Title from "~/components/Title";
 import Blog from "~/components/Blog";
 
 import styles from "./Blogs.scss?inline";
-
-interface StoreType {
-  posts: any[];
-}
 
 type PostStatus = "Published" | "Draft";
 export type Post = {
@@ -63,21 +53,19 @@ export const getAllPosts = $(
   }
 );
 
+export const useAllPosts = routeLoader$(async () => {
+  return await getAllPosts({ locale: "", includeDraft: true });
+});
+
 export default component$(() => {
   useStylesScoped$(styles);
-  const state = useStore<StoreType>({
-    posts: [],
-  });
-
-  useTask$(async () => {
-    state.posts = await getAllPosts({ locale: "en" });
-  });
+  const allPost = useAllPosts();
 
   return (
     <div class="blogs_container">
       <Title title="Blogs" />
       <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
-        {state.posts.map((item: Post) => {
+        {allPost.value.map((item: Post) => {
           return (
             <Blog
               title={item.title}
