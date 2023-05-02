@@ -63,7 +63,7 @@ export default component$(() => {
 
   return (
     <div class="blogs_container">
-      <Title title="Blogs" />
+      <Title title="Blog" />
       <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
         {allPost.value.map((item: Post) => {
           return (
