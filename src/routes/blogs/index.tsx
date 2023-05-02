@@ -41,7 +41,7 @@ export type Post = {
 export const getAllPosts = $(
   async ({ locale = "", includeDraft = false }): Promise<Post[]> => {
     return await fetch(
-      `https://notion.thanhle.workers.dev/v1/table/c0a9456d6fa04bb2af554a310ac7b5ff`
+      `https://notion.thanhle.workers.dev/v1/table/337fc2b8dc63488b96d629120c8adee6`
     )
       .then((res) => res.json())
       .then((res) =>
