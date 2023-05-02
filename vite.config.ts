@@ -7,7 +7,6 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineConfig(() => {
   return {
-    ssr: { target: "node", format: "cjs" },
     plugins: [nodePolyfills({
       // To exclude specific polyfills, add them to this list.
       // Whether to polyfill `node:` protocol imports.
