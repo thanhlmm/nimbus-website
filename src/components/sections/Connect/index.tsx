@@ -13,7 +13,9 @@ export default component$(() => {
     <div class="connect_container">
       <div class="card_wrapper">
         <div class="card_wrapper_container">
-          <div class="title">Be the early pioneers in the new era now</div>
+          <div class="title">
+            Make better investment decisions with Nimbus now
+          </div>
           <a
             href="https://forms.gle/9UdAHNbQorYaSmBY8"
             target="_blank"
