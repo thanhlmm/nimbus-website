@@ -13,7 +13,7 @@ export default component$(() => {
       <div class="footer-container">
         <div class="copyright">© 2023 Nimbus, Inc. All rights reserved.</div>
         <div class="flex items-center justify-center md:gap-14 gap-7 lg:order-2 order-1">
-          <a href="https://nimbus.sleekplan.app/" class="link">
+          <a href="https://nimbus.featurebase.app/" class="link">
             Feedback
           </a>
           <a href="/privacy" class="link">
