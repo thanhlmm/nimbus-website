@@ -2,8 +2,7 @@ import {
   component$,
   useStylesScoped$,
   useStore,
-  useClientEffect$,
-  useWatch$,
+  useTask$,
 } from "@builder.io/qwik";
 import classNames from "classnames";
 
@@ -25,8 +24,8 @@ export default component$(() => {
     isOpen: false,
   });
 
-  useWatch$(({ track }) => {
-    track(state, "isOpen");
+  useTask$(({ track }) => {
+    track(() => state.isOpen);
     if (typeof window !== "undefined") {
       if (state.isOpen) {
         document.body.style.overflow = "hidden";
@@ -36,16 +35,18 @@ export default component$(() => {
     }
   });
 
-  useClientEffect$(() => {
-    const lastScrollY = window.pageYOffset;
-    const handleCheckIsSticky = () => {
-      const scrollY = window.pageYOffset;
-      state.isSticky = scrollY > lastScrollY ? "sticky" : "";
-    };
-    window.addEventListener("scroll", handleCheckIsSticky);
-    return () => {
-      window.removeEventListener("scroll", handleCheckIsSticky);
-    };
+  useTask$(() => {
+    if (typeof window !== "undefined") {
+      const lastScrollY = window.pageYOffset;
+      const handleCheckIsSticky = () => {
+        const scrollY = window.pageYOffset;
+        state.isSticky = scrollY > lastScrollY ? "sticky" : "";
+      };
+      window.addEventListener("scroll", handleCheckIsSticky);
+      return () => {
+        window.removeEventListener("scroll", handleCheckIsSticky);
+      };
+    }
   });
 
   const headerWrapperStyle = classNames("header_wrapper", {
@@ -79,8 +80,13 @@ export default component$(() => {
             >
               Home
             </a>
-            {/* <div class="link">Transaction Explain</div>
-            <div class="link">Blog</div> */}
+            {/* <div class="link">Transaction Explain</div> */}
+            <a
+              href="/blogs"
+              class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
+            >
+              Blogs
+            </a>
           </div>
         </div>
       </header>

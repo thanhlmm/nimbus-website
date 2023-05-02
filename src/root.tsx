@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import {
-  QwikCity,
+  QwikCityProvider,
   RouterOutlet,
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
@@ -16,7 +16,7 @@ export default component$(() => {
    * Dont remove the `<head>` and `<body>` elements.
    */
   return (
-    <QwikCity>
+    <QwikCityProvider>
       <head>
         <meta charSet="utf-8" />
         <script
@@ -27,27 +27,31 @@ export default component$(() => {
         ></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link rel="stylesheet" href="/animate.css" />
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet"
+        />
         <script src="//embed.typeform.com/next/embed.js"></script>
         <RouterHead />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1Z13C1LRM"></script>
-        <script dangerouslySetInnerHTML={`
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-V1Z13C1LRM"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-V1Z13C1LRM');
-        `}>
-        </script>
+        `}
+        ></script>
       </head>
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script>
-          new WOW().init();
-          AOS.init();
-        </script>
+        <script>new WOW().init(); AOS.init();</script>
       </body>
-    </QwikCity>
+    </QwikCityProvider>
   );
 });

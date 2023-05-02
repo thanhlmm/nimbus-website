@@ -1,0 +1,14 @@
+.blogs_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  margin-top: -6.5rem;
+  padding-top: 6.5rem;
+
+  padding: 140px 0 60px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
