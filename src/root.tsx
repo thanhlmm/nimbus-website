@@ -50,7 +50,18 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script>new WOW().init(); AOS.init();</script>
+        <script dangerouslySetInnerHTML="new WOW().init(); AOS.init();"></script>
+        <script src="https://do.featurebase.app/js/widget.js"></script>
+        <script
+          dangerouslySetInnerHTML={`
+            FeaturebaseWidget.init({
+              organization: "nimbus",
+              initialPage: "ChangelogView",
+              placement: "right",
+              fullScreen: false,
+            });
+          `}
+        ></script>
       </body>
     </QwikCityProvider>
   );
