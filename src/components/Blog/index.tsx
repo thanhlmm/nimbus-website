@@ -18,7 +18,7 @@ export default component$((props: Props) => {
       <a href={`/blogs/${props.slug}`}>
         <img
           src={props.image}
-          class="xl:w-[250px] w-full xl:h-[170px] h-[200px] overflow-hidden rounded-[10px] object-cover"
+          class="xl:w-[250px] w-full xl:h-[170px] h-[200px] overflow-hidden object-cover border border-gray-100 rounded-md"
         />
       </a>
       <div class="flex flex-col gap-1 flex-1">
