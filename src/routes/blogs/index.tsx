@@ -87,5 +87,5 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Nimbus - Blogs",
+  title: "Nimbus - Blog",
 };
