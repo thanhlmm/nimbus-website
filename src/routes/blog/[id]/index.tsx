@@ -5,7 +5,7 @@ import { NotionAPI } from "thanhle-notion-client";
 import { QReactNotionBlogPage } from "~/integrations/blog";
 import { getAllPosts } from "..";
 
-import styles from "../Blogs.scss?inline";
+import styles from "../Blog.scss?inline";
 
 export const useBlogDetail = routeLoader$(async (requestEvent) => {
   // This code runs only on the server, after every navigation

@@ -32,7 +32,7 @@ export default component$((props: Props) => {
               Feedback
             </a>
             {/* <div class="link">Transaction Explain</div> */}
-            <a href="/blogs" class="link">
+            <a href="/blog" class="link">
               Blog
             </a>
           </div>

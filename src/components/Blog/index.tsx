@@ -15,7 +15,7 @@ interface Props {
 export default component$((props: Props) => {
   return (
     <div class="flex xl:flex-row flex-col gap-6 flex-1">
-      <a href={`/blogs/${props.slug}`}>
+      <a href={`/blog/${props.slug}`}>
         <img
           src={props.image}
           class="xl:w-[250px] w-full xl:h-[170px] h-[200px] overflow-hidden object-cover border border-gray-100 rounded-md"
@@ -32,7 +32,7 @@ export default component$((props: Props) => {
         </div>
         <div class="flex flex-col gap-2">
           <a
-            href={`/blogs/${props.slug}`}
+            href={`/blog/${props.slug}`}
             class="text-lg font-bold cursor-pointer"
           >
             {props.title}

@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import Title from "~/components/Title";
 import Blog from "~/components/Blog";
 
-import styles from "./Blogs.scss?inline";
+import styles from "./Blog.scss?inline";
 
 type PostStatus = "Published" | "Draft";
 export type Post = {
