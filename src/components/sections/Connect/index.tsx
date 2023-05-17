@@ -17,7 +17,8 @@ export default component$(() => {
             Make better investment decisions with Nimbus now
           </div>
           <a
-            href="https://forms.gle/9UdAHNbQorYaSmBY8"
+            // href="https://forms.gle/9UdAHNbQorYaSmBY8"
+            href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
             target="_blank"
             class="z-[2]"
           >
