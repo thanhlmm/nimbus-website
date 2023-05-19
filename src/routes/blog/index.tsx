@@ -54,7 +54,7 @@ export const getAllPosts = $(
 );
 
 export const useAllPosts = routeLoader$(async () => {
-  return await getAllPosts({ locale: "", includeDraft: true });
+  return await getAllPosts({ locale: "", includeDraft: false });
 });
 
 export default component$(() => {
