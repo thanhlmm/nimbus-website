@@ -19,14 +19,25 @@ export default component$(() => {
       <div class="hero_wrapper_container">
         <div class="flex flex-col gap-8 xl:flex-[0.75] flex-1 lg:order-1 order-2">
           <Title title="A personalized Web3 portfolio tool" />
-          <a
-            // href="https://forms.gle/9UdAHNbQorYaSmBY8"
-            href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
-            target="_blank"
-          >
-            <Button text="Join Beta Test" />
-          </a>
-          <div class="flex flex-col gap-3 md:mt-10 mt-2">
+
+          <div class="flex md:items-center md:flex-row flex-col gap-8">
+            <a
+              // href="https://forms.gle/9UdAHNbQorYaSmBY8"
+              href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
+              target="_blank"
+            >
+              <Button text="Join Beta Test" />
+            </a>
+            <a
+              href="https://app.getnimbus.io/?address=0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+              target="_blank"
+              class="font-medium text-xl text-center link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all md:hover:after:w-full md:hover:after:left-0"
+            >
+              Get a demo 🚀
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-3 mt-10">
             <div class="title">Quality Data From</div>
             <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-4 md:mt-0 mt-3">
               <div class="grid grid-cols-2 items-center gap-4">

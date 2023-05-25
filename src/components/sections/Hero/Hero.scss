@@ -20,6 +20,18 @@
       color: var(--qwik-gray-3);
       text-transform: uppercase;
     }
+
+    .link {
+      color: var(--qwik-black);
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: var(--qwik-main-color);
+      }
+    }
   }
 }
 
