@@ -5,11 +5,8 @@ import Title from "~/components/Title";
 import Button from "~/components/Button";
 
 import Hero from "../../../assets/images/hero/hero.webp";
-import CoingeckoLogo from "../../../assets/images/hero/coingecko.svg";
-// import DebankLogo from "../../../assets/images/hero/debank.svg";
+import CoinMarketCap from "../../../assets/images/hero/coinmarketcap.svg";
 import BlockPI from "../../../assets/images/hero/blockPI.png";
-import AnkrLogo from "../../../assets/images/hero/ankr.svg";
-import CovalentLogo from "../../../assets/images/hero/covalent.svg";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -39,39 +36,21 @@ export default component$(() => {
 
           <div class="flex flex-col gap-3 mt-10">
             <div class="title">Quality Data From</div>
-            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-4 md:mt-0 mt-3">
-              <div class="grid grid-cols-2 items-center gap-4">
-                <img
-                  src={CoingeckoLogo}
-                  alt="Coingecko"
-                  class="object-contain w-full h-full"
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <img
-                  src={BlockPI}
-                  alt="BlockPI"
-                  class="object-contain w-full h-full"
-                  width={"100%"}
-                  height={"100%"}
-                />
-              </div>
-              <div class="grid grid-cols-2 items-center gap-4">
-                <img
-                  src={CovalentLogo}
-                  alt="Covalent"
-                  class="object-contain w-full h-full"
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <img
-                  src={AnkrLogo}
-                  alt="Ankr"
-                  class="object-contain w-full h-full"
-                  width={"100%"}
-                  height={"100%"}
-                />
-              </div>
+            <div class="flex items-center gap-8">
+              <img
+                src={CoinMarketCap}
+                alt="CoinMarketCap"
+                class="object-contain"
+                width={"40%"}
+                height={"40%"}
+              />
+              <img
+                src={BlockPI}
+                alt="BlockPI"
+                class="object-contain"
+                width={"25%"}
+                height={"25%"}
+              />
             </div>
           </div>
         </div>
