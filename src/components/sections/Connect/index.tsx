@@ -18,7 +18,8 @@ export default component$(() => {
           </div>
           <a
             // href="https://forms.gle/9UdAHNbQorYaSmBY8"
-            href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
+            // href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
+            href="https://forms.gle/W8XQAC1SARagaNMd8"
             target="_blank"
             class="z-[2]"
           >
