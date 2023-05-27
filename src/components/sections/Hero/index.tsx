@@ -20,7 +20,8 @@ export default component$(() => {
           <div class="flex md:items-center md:flex-row flex-col gap-8">
             <a
               // href="https://forms.gle/9UdAHNbQorYaSmBY8"
-              href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
+              // href="https://chrome.google.com/webstore/detail/nimbus/edmjifiafngnpfefmbbaoipelifjgpfg"
+              href="https://forms.gle/sTs4z1zq3ZxALKJK8"
               target="_blank"
             >
               <Button text="Join Beta Test" />
