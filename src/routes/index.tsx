@@ -25,6 +25,18 @@ export default component$(() => {
       <Connect />
       {/* <Testimonials /> */}
       <Team />
+      <iframe
+        data-w-type="embedded"
+        src="https://08m2q.mjt.lu/wgt/08m2q/g7z/form?c=13dad1e6"
+        frameBorder="0"
+        scrolling="no"
+        marginHeight={0}
+        marginWidth={0}
+        style="
+          max-width: 1200px;
+          margin: -20px auto 100px auto;
+          width: 100%;"
+      ></iframe>
     </>
   );
 });

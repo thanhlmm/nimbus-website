@@ -67,6 +67,10 @@ export default component$(() => {
           src="https://analytics.umami.is/script.js"
           data-website-id="2ecfa1ca-7bea-46ba-87a3-8f4f9bf12eae"
         ></script>
+        <script
+          type="text/javascript"
+          src="https://app.mailjet.com/pas-nc-embedded-v1.js"
+        ></script>
       </body>
     </QwikCityProvider>
   );
