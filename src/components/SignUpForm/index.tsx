@@ -8,9 +8,8 @@ export default component$(() => {
     <div
       class="border border-[#0000001a] rounded-[20px] md:pt-6 md:px-6 overflow-hidden"
       style="
-          max-width: 680px;
           margin: 20px auto 120px auto;
-          width: 90%;"
+          width: 50%;"
     >
       <div class="title">
         Manage your portfolio more effective by get updates from us
