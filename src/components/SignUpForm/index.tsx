@@ -5,7 +5,7 @@ export default component$(() => {
   useStylesScoped$(styles);
 
   return (
-    <div class="border border-[#0000001a] rounded-[20px] md:pt-6 md:px-6 overflow-hidden w-1/2 mt-5 mb-32 mx-auto">
+    <div class="border border-[#0000001a] rounded-[20px] md:pt-6 md:px-6 overflow-hidden xl:w-1/2 lg:w-2/3 w-[90%] mt-5 mb-32 mx-auto">
       <div class="title">
         Manage your portfolio more effective by get updates from us
       </div>
