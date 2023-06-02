@@ -4,6 +4,7 @@ import { NotionAPI } from "thanhle-notion-client";
 
 import { QReactNotionBlogPage } from "~/integrations/blog";
 import { getAllPosts } from "..";
+import SignUpForm from "~/components/SignUpForm";
 
 import styles from "../Blog.scss?inline";
 
@@ -32,6 +33,7 @@ export default component$(() => {
   return (
     <div class="blogs_container">
       <QReactNotionBlogPage block={blockData.value} />
+      <SignUpForm />
     </div>
   );
 });

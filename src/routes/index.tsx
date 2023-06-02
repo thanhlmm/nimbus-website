@@ -11,6 +11,7 @@ import SupportedChain from "~/components/sections/SupportedChain";
 import Connect from "~/components/sections/Connect";
 // import Testimonials from "~/components/sections/Testimonials";
 import Team from "~/components/sections/Team";
+import SignUpForm from "~/components/SignUpForm";
 
 export default component$(() => {
   return (
@@ -25,6 +26,7 @@ export default component$(() => {
       <Connect />
       {/* <Testimonials /> */}
       <Team />
+      <SignUpForm />
     </>
   );
 });

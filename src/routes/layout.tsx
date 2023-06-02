@@ -3,7 +3,6 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
-import SignUpForm from "~/components/SignUpForm";
 
 export const useServerTimeLoader = routeLoader$(() => {
   return {
@@ -16,7 +15,6 @@ export default component$(() => {
     <>
       <Header />
       <Slot />
-      <SignUpForm />
       <Footer />
     </>
   );
