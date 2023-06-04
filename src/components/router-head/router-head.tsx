@@ -34,7 +34,7 @@ export const RouterHead = component$(() => {
       />
       <meta
         property="og:description"
-        content="Nimubs is a lifestyle app that help everyone understand & take profit in Web3 space."
+        content="Nimbus is a lifestyle app that help everyone understand & take profit in Web3 space."
       />
       <meta
         property="twitter:title"
@@ -42,7 +42,7 @@ export const RouterHead = component$(() => {
       />
       <meta
         property="twitter:description"
-        content="Nimubs is a lifestyle app that help everyone understand & take profit in Web3 space."
+        content="Nimbus is a lifestyle app that help everyone understand & take profit in Web3 space."
       />
 
       <meta property="og:image" content="/hero.png" />
