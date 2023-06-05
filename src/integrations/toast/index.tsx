@@ -1,24 +1,34 @@
 /** @jsxImportSource react */
 import { qwikify$ } from "@builder.io/qwik-react";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { configureAbly, useChannel } from "@ably-labs/react-hooks";
 
 import "react-notion-x/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 
 function ReactToast() {
-  const notify = () => {
-    toast.custom(
-      <Toast address="0x8980dbbe60d92b53b08ff95ea1aaaabb7f665bcb" />,
-      {
-        duration: 4000,
-        position: "bottom-left",
-        ariaProps: {
-          role: "status",
-          "aria-live": "polite",
-        },
-      }
-    );
+  configureAbly({
+    key: "YCiL-A.UsUzxQ:5cpM61UhKi-6OuVnoubOR27qMh605ii-7n5J_TTXWj0",
+  });
+
+  const [channel] = useChannel("address-sync", (message) => {
+    toast.custom(<Toast address={message.data} />, {
+      duration: 4000,
+      position: "bottom-left",
+      ariaProps: {
+        role: "status",
+        "aria-live": "polite",
+      },
+    });
+  });
+
+  useEffect(() => {
+    SubscribeWS();
+  }, []);
+
+  const SubscribeWS = async () => {
+    await channel.subscribe("address");
   };
 
   return (

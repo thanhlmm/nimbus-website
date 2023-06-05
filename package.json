@@ -53,6 +53,7 @@
     "vite-tsconfig-paths": "4.2.0"
   },
   "dependencies": {
+    "@ably-labs/react-hooks": "^2.1.1",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.7",
     "notion-client": "^6.16.0",
