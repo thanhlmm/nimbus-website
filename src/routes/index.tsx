@@ -26,7 +26,9 @@ export default component$(() => {
       <Connect />
       {/* <Testimonials /> */}
       <Team />
-      <SignUpForm />
+      <div class="form_wrapper">
+        <SignUpForm />
+      </div>
     </>
   );
 });
