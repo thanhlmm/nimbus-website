@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import "react-notion-x/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 
-function ReactToast({ data }: { data: any }) {
+function ReactToast() {
   const notify = () => {
     toast.custom(
       <Toast address="0x8980dbbe60d92b53b08ff95ea1aaaabb7f665bcb" />,

@@ -17,7 +17,7 @@ import SignUpForm from "~/components/SignUpForm";
 export default component$(() => {
   return (
     <>
-      <QReactToast data="hello" />
+      <QReactToast />
       <Hero />
       <Problem />
       <Evolution />
