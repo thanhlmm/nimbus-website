@@ -207,6 +207,7 @@ export default component$(() => {
           }`}
           type={`${state.isSuccess ? "success" : "fail"}`}
           isShow={state.openToast}
+          position="top-center"
         />
       )}
     </div>

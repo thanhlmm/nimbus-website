@@ -3,17 +3,12 @@
   padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  min-width: 350px;
 
-  position: fixed;
-  left: 50%;
-  top: 5%;
-  transform: translate(-50%, -50%);
   z-index: 9999;
 
-  display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
   .symbol {
     font-size: var(--qwik-fs-xl);
@@ -34,35 +29,35 @@
     background: var(--qwik-red);
   }
 
+  .symbol.info {
+    background: var(--qwik-neutral-200);
+  }
+
   .message {
     flex: 1;
     text-align: start;
   }
 }
 
+.top-center {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+  position: fixed;
+  right: 1%;
+  bottom: 8%;
+}
+
 #show {
   visibility: visible;
-  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+  display: flex;
 }
 
 #hide {
   visibility: hidden;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  display: none;
 }
