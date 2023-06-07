@@ -1,0 +1,63 @@
+.toast {
+  background: var(--qwik-white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  min-width: 350px;
+
+  z-index: 9999;
+
+  align-items: center;
+  gap: 0.5rem;
+
+  .symbol {
+    font-size: var(--qwik-fs-xl);
+    color: var(--qwik-white);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  .symbol.success {
+    background: var(--qwik-green);
+  }
+
+  .symbol.fail {
+    background: var(--qwik-red);
+  }
+
+  .symbol.info {
+    background: var(--qwik-neutral-200);
+  }
+
+  .message {
+    flex: 1;
+    text-align: start;
+  }
+}
+
+.top-center {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+  position: fixed;
+  right: 1%;
+  bottom: 8%;
+}
+
+#show {
+  visibility: visible;
+  display: flex;
+}
+
+#hide {
+  visibility: hidden;
+  display: none;
+}

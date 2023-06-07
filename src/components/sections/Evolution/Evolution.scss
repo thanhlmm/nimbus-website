@@ -1,0 +1,23 @@
+.evolution_wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(224, 227, 244, 0.13) 76.54%,
+    rgba(226, 228, 244, 0) 100%
+  );
+
+  &_container {
+    max-width: var(--qwik-max-width);
+    margin: auto;
+    width: var(--qwik-section-width);
+
+    padding: 120px 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .evolution_wrapper {
+    &_container {
+      padding: 60px 0;
+    }
+  }
+}

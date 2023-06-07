@@ -1,0 +1,107 @@
+.team_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  padding-bottom: 120px;
+
+  .sub-title {
+    width: 60%;
+    text-align: center;
+    font-weight: var(--qwik-fw-regular);
+    font-size: var(--qwik-fs-lg);
+    line-height: var(--qwik-lh-lg);
+    color: var(--qwik-black);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    width: 370px;
+
+    .avatar {
+      width: 184px;
+      height: 184px;
+      border-radius: 100%;
+      overflow: hidden;
+      border: 4px solid;
+      border-color: var(--qwik-tosca);
+      padding: 0.5rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+
+      &:hover {
+        border-color: var(--qwik-tosca);
+        padding: 0;
+      }
+
+      .image_container {
+        width: 100%;
+        height: 100%;
+        background: var(--qwik-tosca);
+        position: relative;
+        overflow: hidden;
+        border-radius: 100%;
+        transform: scale(1);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .about_container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .quote {
+        font-weight: var(--qwik-fw-regular);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--qwik-main-color);
+        margin-bottom: 8px;
+      }
+
+      .name,
+      .position {
+        font-weight: var(--qwik-fw-regular);
+        font-size: var(--qwik-fs-lg);
+        line-height: var(--qwik-lh-lg);
+        color: var(--qwik-tosca);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team_container {
+    .sub-title {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .team_container {
+    .sub-title {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .team_container {
+    .sub-title {
+      width: 100%;
+    }
+  }
+}

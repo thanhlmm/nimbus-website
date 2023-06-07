@@ -1,0 +1,124 @@
+.item {
+  position: relative;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:nth-child(1) .line,
+  &:nth-child(2) .line {
+    // Temp fix for https://github.com/BuilderIO/qwik/issues/1662
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 100%;
+    width: 15vw;
+    border-top: 3px dashed var(--qwik-tosca);
+  }
+
+  &:nth-child(3) .line {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 100%;
+    width: 140%;
+    border-top: 3px dashed var(--qwik-tosca);
+  }
+
+  .item-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+
+    .title {
+      text-align: center;
+      font-weight: var(--qwik-fw-semibold);
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
+      color: var(--qwik-main-color);
+    }
+
+    .image {
+      margin-top: auto;
+    }
+  }
+
+  .label {
+    position: relative;
+    display: inline-block;
+    padding: 6px 20px;
+    margin: 6px auto 20px;
+
+    font-weight: var(--qwik-fw-semibold);
+    font-size: var(--qwik-fs-lg);
+    line-height: var(--qwik-lh-lg);
+    color: var(--qwik-main-color);
+    background: var(--qwik-tosca);
+    border-radius: 50px;
+
+    &--soon {
+      background: var(--qwik-main-color);
+      color: var(--qwik-white);
+    }
+  }
+
+  .rocket-img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 64%;
+    left: 95%;
+  }
+
+  .content {
+    max-width: 170px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: var(--qwik-fw-semibold);
+    font-size: var(--qwik-fs-lg);
+    line-height: var(--qwik-lh-lg);
+    color: var(--qwik-main-color);
+  }
+
+  &:nth-child(1) .item-group {
+    .image {
+      margin-left: -15px;
+    }
+  }
+
+  &:nth-child(2) .item-group {
+    .image {
+      margin-left: -30px;
+    }
+  }
+
+  &:nth-child(3) .item-group {
+    .image {
+      margin-left: -45px;
+    }
+  }
+
+  &:nth-child(4) .item-group {
+    .image {
+      margin-left: -65px;
+    }
+  }
+}
+
+@media screen and (max-width: 1082px) {
+  .item {
+    &:nth-child(3) .line {
+      content: "";
+      width: 100%;
+    }
+
+    .rocket-img {
+      width: 60px;
+      height: 60px;
+      top: 66%;
+      left: 90%;
+    }
+  }
+}

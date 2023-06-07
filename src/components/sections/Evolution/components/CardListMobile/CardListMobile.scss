@@ -1,0 +1,111 @@
+.item {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  .label {
+    position: relative;
+    display: inline-block;
+    padding: 6px 20px;
+
+    font-weight: var(--qwik-fw-semibold);
+    font-size: var(--qwik-fs-lg);
+    line-height: var(--qwik-lh-lg);
+    color: var(--qwik-main-color);
+    background: var(--qwik-tosca);
+    border-radius: 50px;
+
+    &--soon {
+      background: var(--qwik-main-color);
+      color: var(--qwik-white);
+    }
+  }
+
+  &:nth-child(1) .line,
+  &:nth-child(2) .line {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 50%;
+    height: 50vh;
+    border-right: 3px dashed var(--qwik-tosca);
+  }
+
+  &:nth-child(3) .line {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 50%;
+    height: 30vh;
+    border-right: 3px dashed var(--qwik-tosca);
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    margin-bottom: 60px;
+
+    .title {
+      font-weight: var(--qwik-fw-semibold);
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
+      color: var(--qwik-main-color);
+    }
+
+    .content {
+      max-width: 200px;
+      font-weight: var(--qwik-fw-medium);
+      font-size: var(--qwik-fs-lg);
+      line-height: var(--qwik-lh-lg);
+      color: var(--qwik-main-color);
+    }
+
+    .rocket-img {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &:nth-child(1) .card-content {
+    .image {
+      margin-left: -35px;
+    }
+  }
+
+  &:nth-child(2) .card-content {
+    .image {
+      margin-left: -50px;
+    }
+  }
+
+  &:nth-child(3) .card-content,
+  &:nth-child(4) .card-content {
+    .image {
+      margin-left: -65px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item {
+    .card-content {
+      .rocket-img {
+        top: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .item {
+    .card-content {
+      .rocket-img {
+        top: 55%;
+      }
+    }
+  }
+}

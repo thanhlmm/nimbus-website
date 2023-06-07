@@ -1,0 +1,53 @@
+.testimonials_container {
+  max-width: var(--qwik-max-width);
+  margin: auto;
+  width: var(--qwik-section-width);
+
+  padding-bottom: 120px;
+
+  .card {
+    background: #fdfdfd;
+    border: 1px solid #e1eded;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 10px 10px 40px rgba(34, 46, 111, 0.1);
+    }
+
+    .name {
+      font-weight: var(--qwik-fw-medium);
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
+      color: var(--qwik-main-color);
+    }
+
+    .email,
+    .content {
+      font-weight: var(--qwik-fw-regular);
+      font-size: var(--qwik-fs-sm);
+      line-height: var(--qwik-lh-sm);
+    }
+
+    .email {
+      color: var(--qwik-main-color);
+    }
+
+    .content {
+      color: var(--qwik-gray-1);
+    }
+
+    .time {
+      font-weight: var(--qwik-fw-regular);
+      font-size: var(--qwik-fs-xs);
+      line-height: var(--qwik-lh-xs);
+      color: var(--qwik-gray-3);
+    }
+  }
+}
