@@ -24,7 +24,18 @@ const ReactToast = () => {
   };
   return (
     <div>
-      <button onClick={notify} style={{marginLeft: "10px", border: "1px solid", padding: "5px", borderRadius: "4px"}}> Button demo </button>
+      <button
+        onClick={notify}
+        style={{
+          marginLeft: "10px",
+          border: "1px solid",
+          padding: "5px",
+          borderRadius: "4px",
+        }}
+      >
+        {" "}
+        Button demo{" "}
+      </button>
       <Toaster>
         {(t) => (
           <ToastBar toast={t}>
@@ -33,14 +44,14 @@ const ReactToast = () => {
                 {icon}
                 {message}
                 {t.type !== "loading" && (
-                  <div>
+                  <div style={{ height: "100%"}}>
                     <button
                       style={{
-                        border: "0px",
-                        fontSize: "12px",
+                        fontSize: "14px",
                         backgroundColor: "white",
                         width: "10px",
-                        height: "10px"
+                        height: "10px",
+                        marginTop: "7px"
                       }}
                       onClick={() => toast.dismiss(t.id)}
                     >
@@ -63,22 +74,21 @@ const Toast = ({ address }: any) => {
   };
 
   return (
-      <p>
-        <AiFillExclamationCircle
-          style={{
-            color: "rgb(159, 159, 159)",
-            width: "20px",
-            height: "20px",
-            margin: "0",
-            marginRight: "5px",
-            position: "relative",
-            top: "1.5px",
-            float: "left"
-          }}
-        />
-        <b>{shorterAddress(address)}</b>
-        has used Nimbus portfolio
-      </p>
+    <p>
+      <AiFillExclamationCircle
+        style={{
+          color: "rgb(159, 159, 159)",
+          width: "20px",
+          height: "20px",
+          margin: "0",
+          marginRight: "5px",
+          position: "relative",
+          top: "1.5px",
+          float: "left",
+        }}
+      />{" "}
+      <b>{shorterAddress(address)}</b> has used Nimbus portfolio
+    </p>
   );
 };
 
