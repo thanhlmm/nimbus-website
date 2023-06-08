@@ -1,7 +1,7 @@
 /** @jsxImportSource react */
 import { qwikify$ } from "@builder.io/qwik-react";
 import toast, { Toaster, ToastBar } from "react-hot-toast";
-import { AiOutlineExclamationCircle } from "react-icons/ai";
+import { AiFillExclamationCircle } from "react-icons/ai";
 
 const ReactToast = () => {
   const notify = () => {
@@ -12,7 +12,7 @@ const ReactToast = () => {
       style: {
         borderRadius: "5px",
         minWidth: "300px",
-        width: "25%",
+        width: "30%",
         visibility: "visible",
         verticalAlign: "middle",
       },
@@ -24,6 +24,7 @@ const ReactToast = () => {
   };
   return (
     <div>
+      <button onClick={notify} style={{marginLeft: "10px", border: "1px solid", padding: "5px", borderRadius: "4px"}}> Button demo </button>
       <Toaster>
         {(t) => (
           <ToastBar toast={t}>
@@ -38,6 +39,8 @@ const ReactToast = () => {
                         border: "0px",
                         fontSize: "12px",
                         backgroundColor: "white",
+                        width: "10px",
+                        height: "10px"
                       }}
                       onClick={() => toast.dismiss(t.id)}
                     >
@@ -60,17 +63,22 @@ const Toast = ({ address }: any) => {
   };
 
   return (
-    <div>
-      <div>
-        <b>
-          <AiOutlineExclamationCircle
-            style={{ color: "rgb(159, 159, 159)", width: "20px", margin: 2, position: "relative", top: "2.5px"}}
-          />{" "}
-          {shorterAddress(address)}
-        </b>{" "}
+      <p>
+        <AiFillExclamationCircle
+          style={{
+            color: "rgb(159, 159, 159)",
+            width: "20px",
+            height: "20px",
+            margin: "0",
+            marginRight: "5px",
+            position: "relative",
+            top: "1.5px",
+            float: "left"
+          }}
+        />
+        <b>{shorterAddress(address)}</b>
         has used Nimbus portfolio
-      </div>
-    </div>
+      </p>
   );
 };
 
