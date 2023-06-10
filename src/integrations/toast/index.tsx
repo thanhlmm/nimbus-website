@@ -94,4 +94,6 @@ const Toast = ({ address }: any) => {
   );
 };
 
-export const QReactToast = qwikify$(ReactToast, { eagerness: "hover" });
+export const QReactToast = qwikify$(ReactToast, {
+  eagerness: "visible",
+});

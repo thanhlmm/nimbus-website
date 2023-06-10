@@ -4,7 +4,7 @@
 
 "@ably-labs/react-hooks@^2.1.1":
   version "2.1.1"
-  resolved "https://registry.npmjs.org/@ably-labs/react-hooks/-/react-hooks-2.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/@ably-labs/react-hooks/-/react-hooks-2.1.1.tgz#017f07cbe93ff214b08a4815bdce926ff6918365"
   integrity sha512-Bunqu9GDFInZLpFMfWhUboU1g4W5UXzDfeAqI9ueNIF3p9KIMS7LfgjKBfXsC0DtAWkBgCjL22PvNToiHP92Ig==
   dependencies:
     ably "^1.2.27"
