@@ -1,19 +1,17 @@
 /** @jsxImportSource react */
+import { Suspense, useEffect } from "react";
 import { qwikify$ } from "@builder.io/qwik-react";
 import toast, { Toaster, ToastBar } from "react-hot-toast";
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { configureAbly, useChannel } from "@ably-labs/react-hooks";
 
-const ably = configureAbly({
-  key: "YCiL-A.UsUzxQ:5cpM61UhKi-6OuVnoubOR27qMh605ii-7n5J_TTXWj0",
-});
-
 const ReactToast = () => {
+  configureAbly({
+    key: "YCiL-A.UsUzxQ:5cpM61UhKi-6OuVnoubOR27qMh605ii-7n5J_TTXWj0",
+  });
 
-  const [channel] = useChannel("address", (address) => {
-    console.log("channel đã được nhận");
-    console.log(address);
-    toast(<Toast address={address} />, {
+  const [channel] = useChannel("address-sync", (message) => {
+    toast(<Toast address={message.data} />, {
       duration: 3000,
       position: "bottom-left",
       style: {
@@ -29,8 +27,17 @@ const ReactToast = () => {
       },
     });
   });
+
+  useEffect(() => {
+    SubscribeWS();
+  }, []);
+
+  const SubscribeWS = async () => {
+    await channel.subscribe("address");
+  };
+
   return (
-    <div>
+    <Suspense>
       <Toaster>
         {(t) => (
           <ToastBar toast={t}>
@@ -59,7 +66,7 @@ const ReactToast = () => {
           </ToastBar>
         )}
       </Toaster>
-    </div>
+    </Suspense>
   );
 };
 
