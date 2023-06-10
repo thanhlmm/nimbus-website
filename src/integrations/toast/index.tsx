@@ -2,10 +2,17 @@
 import { qwikify$ } from "@builder.io/qwik-react";
 import toast, { Toaster, ToastBar } from "react-hot-toast";
 import { AiFillExclamationCircle } from "react-icons/ai";
+import { configureAbly, useChannel } from "@ably-labs/react-hooks";
+
+const ably = configureAbly({
+  key: "YCiL-A.UsUzxQ:5cpM61UhKi-6OuVnoubOR27qMh605ii-7n5J_TTXWj0",
+});
 
 const ReactToast = () => {
-  const notify = () => {
-    let address = "0x8980dbbe60d92b53b08ff95ea1aaaabb7f665bcb";
+
+  const [channel] = useChannel("address", (address) => {
+    console.log("channel đã được nhận");
+    console.log(address);
     toast(<Toast address={address} />, {
       duration: 3000,
       position: "bottom-left",
@@ -21,21 +28,9 @@ const ReactToast = () => {
         "aria-live": "polite",
       },
     });
-  };
+  });
   return (
     <div>
-      <button
-        onClick={notify}
-        style={{
-          marginLeft: "10px",
-          border: "1px solid",
-          padding: "5px",
-          borderRadius: "4px",
-        }}
-      >
-        {" "}
-        Button demo{" "}
-      </button>
       <Toaster>
         {(t) => (
           <ToastBar toast={t}>
@@ -44,14 +39,14 @@ const ReactToast = () => {
                 {icon}
                 {message}
                 {t.type !== "loading" && (
-                  <div style={{ height: "100%"}}>
+                  <div style={{ height: "100%" }}>
                     <button
                       style={{
                         fontSize: "14px",
                         backgroundColor: "white",
                         width: "10px",
                         height: "10px",
-                        marginTop: "7px"
+                        marginTop: "7px",
                       }}
                       onClick={() => toast.dismiss(t.id)}
                     >

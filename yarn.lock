@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@ably-labs/react-hooks@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/@ably-labs/react-hooks/-/react-hooks-2.1.1.tgz"
+  integrity sha512-Bunqu9GDFInZLpFMfWhUboU1g4W5UXzDfeAqI9ueNIF3p9KIMS7LfgjKBfXsC0DtAWkBgCjL22PvNToiHP92Ig==
+  dependencies:
+    ably "^1.2.27"
+
+"@ably/msgpack-js@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@ably/msgpack-js/-/msgpack-js-0.4.0.tgz"
+  integrity sha512-IPt/BoiQwCWubqoNik1aw/6M/DleMdrxJOUpSja6xmMRbT2p1TA8oqKWgfZabqzrq8emRNeSl/+4XABPNnW5pQ==
+  dependencies:
+    bops "^1.0.1"
+
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"
@@ -2229,6 +2243,15 @@ abbrev@1:
   resolved "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
+ably@^1.2.27:
+  version "1.2.40"
+  resolved "https://registry.npmjs.org/ably/-/ably-1.2.40.tgz"
+  integrity sha512-Rmc/IBW9BQeDqaVZdeYD2HMakfzoumHw8Ag3JtqxdC8xcc50k69FDY3Y1t9Mp7nrDQDjDYXvHgiOkVp99jNjHA==
+  dependencies:
+    "@ably/msgpack-js" "^0.4.0"
+    got "^11.8.5"
+    ws "^5.1"
+
 accepts@~1.3.8:
   version "1.3.8"
   resolved "https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz"
@@ -2445,6 +2468,11 @@ astring@^1.6.0, astring@^1.8.0:
   resolved "https://registry.npmjs.org/astring/-/astring-1.8.4.tgz"
   integrity sha512-97a+l2LBU3Op3bBQEff79i/E4jMD2ZLFD8rHx9B6mXyB2uQwhJQYfiDqUwtfjF4QA1F2qs//N6Cw8LetMbQjcw==
 
+async-limiter@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/async-limiter/-/async-limiter-1.0.1.tgz"
+  integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
+
 async-listen@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/async-listen/-/async-listen-1.2.0.tgz"
@@ -2525,6 +2553,11 @@ base64-js@^1.3.1:
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
+base64-js@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.0.2.tgz"
+  integrity sha512-ZXBDPMt/v/8fsIqn+Z5VwrhdR6jVka0bYobHdGia0Nxi7BJ9i/Uvml3AocHIBtIIBhZjBw5MR0aR4ROs/8+SNg==
+
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.npmjs.org/big.js/-/big.js-5.2.2.tgz"
@@ -2588,6 +2621,14 @@ body-parser@1.20.1:
     raw-body "2.5.1"
     type-is "~1.6.18"
     unpipe "1.0.0"
+
+bops@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/bops/-/bops-1.0.1.tgz"
+  integrity sha512-qCMBuZKP36tELrrgXpAfM+gHzqa0nLsWZ+L37ncsb8txYlnAoxOPpVp+g7fK0sGkMXfA0wl8uQkESqw3v4HNag==
+  dependencies:
+    base64-js "1.0.2"
+    to-utf8 "0.0.1"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -4433,7 +4474,7 @@ gopd@^1.0.1:
   dependencies:
     get-intrinsic "^1.1.3"
 
-got@^11.0.0, got@^11.8.1:
+got@^11.0.0, got@^11.8.1, got@^11.8.5:
   version "11.8.6"
   resolved "https://registry.npmjs.org/got/-/got-11.8.6.tgz"
   integrity sha512-6tfZ91bOr7bOXnK7PRDCGBLa1H4U080YHNaAQ2KsMGlLEzRbk44nsZF2E1IeRc3vtJHPVbKCYgdFbaGO2ljd8g==
@@ -6917,7 +6958,7 @@ raw-body@^2.2.0, raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-dom@*, "react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react-dom@^15 || ^16", "react-dom@^16.3.0 || ^17.0.0 || ^18.0.0", "react-dom@^16.8.0  || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0", react-dom@>=16, react-dom@>=16.6.0, react-dom@>=16.8, react-dom@>=16.8.1, react-dom@>=18.0.0, react-dom@18.2.0:
+react-dom@*, "react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react-dom@^15 || ^16", "react-dom@^16.3.0 || ^17.0.0 || ^18.0.0", "react-dom@^16.8.0  || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0", react-dom@>=16, react-dom@>=16.6.0, react-dom@>=16.8, react-dom@>=16.8.1, react-dom@>=18.0.0, react-dom@>=18.1.0, react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -7082,7 +7123,7 @@ react-use@^17.3.1:
     ts-easing "^0.2.0"
     tslib "^2.1.0"
 
-react@*, "react@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react@^15 || ^16", "react@^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0  || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", react@^18.2.0, react@>=16, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@>=16.8.1, react@>=18.0.0, react@18.2.0:
+react@*, "react@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react@^15 || ^16", "react@^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0  || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", react@^18.2.0, react@>=16, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@>=16.8.1, react@>=18.0.0, react@>=18.1.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -8087,6 +8128,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+to-utf8@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/to-utf8/-/to-utf8-0.0.1.tgz"
+  integrity sha512-zks18/TWT1iHO3v0vFp5qLKOG27m67ycq/Y7a7cTiRuUNlc4gf3HGnkRgMv0NyhnfTamtkYBJl+YeD1/j07gBQ==
+
 toggle-selection@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/toggle-selection/-/toggle-selection-1.0.6.tgz"
@@ -8699,6 +8745,13 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
+
+ws@^5.1:
+  version "5.2.3"
+  resolved "https://registry.npmjs.org/ws/-/ws-5.2.3.tgz"
+  integrity sha512-jZArVERrMsKUatIdnLzqvcfydI85dvd/Fp1u/VOpfdDWQ4c9qWXe+VIeAbQ5FrDwciAkr+lzofXLz3Kuf26AOA==
+  dependencies:
+    async-limiter "~1.0.0"
 
 ws@^7.4.5:
   version "7.5.9"
