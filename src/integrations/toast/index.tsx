@@ -1,5 +1,5 @@
 /** @jsxImportSource react */
-import { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import { qwikify$ } from "@builder.io/qwik-react";
 import toast, { Toaster, ToastBar } from "react-hot-toast";
 import { AiFillExclamationCircle } from "react-icons/ai";
@@ -12,7 +12,7 @@ const ReactToast = () => {
 
   const [channel] = useChannel("address-sync", (message) => {
     toast(<Toast address={message.data} />, {
-      duration: 3000,
+      duration: 1500,
       position: "bottom-left",
       style: {
         borderRadius: "5px",
@@ -37,36 +37,34 @@ const ReactToast = () => {
   };
 
   return (
-    <Suspense>
-      <Toaster>
-        {(t) => (
-          <ToastBar toast={t}>
-            {({ icon, message }) => (
-              <>
-                {icon}
-                {message}
-                {t.type !== "loading" && (
-                  <div style={{ height: "100%" }}>
-                    <button
-                      style={{
-                        fontSize: "14px",
-                        backgroundColor: "white",
-                        width: "10px",
-                        height: "10px",
-                        marginTop: "7px",
-                      }}
-                      onClick={() => toast.dismiss(t.id)}
-                    >
-                      X
-                    </button>
-                  </div>
-                )}
-              </>
-            )}
-          </ToastBar>
-        )}
-      </Toaster>
-    </Suspense>
+    <Toaster>
+      {(t) => (
+        <ToastBar toast={t}>
+          {({ icon, message }) => (
+            <>
+              {icon}
+              {message}
+              {t.type !== "loading" && (
+                <div style={{ height: "100%" }}>
+                  <button
+                    style={{
+                      fontSize: "14px",
+                      backgroundColor: "white",
+                      width: "10px",
+                      height: "10px",
+                      marginTop: "7px",
+                    }}
+                    onClick={() => toast.dismiss(t.id)}
+                  >
+                    X
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </ToastBar>
+      )}
+    </Toaster>
   );
 };
 
