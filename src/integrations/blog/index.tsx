@@ -36,7 +36,6 @@ function ReactNotionBlogPage({ block }: { block: any }) {
   );
 }
 
-// Specify eagerness to hydrate component on hover event.
 export const QReactNotionBlogPage = qwikify$(ReactNotionBlogPage, {
   eagerness: "visible",
 });
