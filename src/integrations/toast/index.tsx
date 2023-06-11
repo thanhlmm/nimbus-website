@@ -5,34 +5,34 @@ import toast, { Toaster, ToastBar } from "react-hot-toast";
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { configureAbly, useChannel } from "@ably-labs/react-hooks";
 
-const Toast = ({ address }: { address: string }) => {
-  const shorterAddress = (string: string) => {
-    return string ? string.slice(0, 6) + "..." + string.substr(-4) : string;
-  };
-
-  return (
-    <p>
-      <AiFillExclamationCircle
-        style={{
-          color: "rgb(159, 159, 159)",
-          width: "20px",
-          height: "20px",
-          margin: "0",
-          marginRight: "5px",
-          position: "relative",
-          top: "1.5px",
-          float: "left",
-        }}
-      />
-      <b>{shorterAddress(address)}</b> has used Nimbus portfolio
-    </p>
-  );
-};
-
 function ReactToast() {
   configureAbly({
     key: "YCiL-A.UsUzxQ:5cpM61UhKi-6OuVnoubOR27qMh605ii-7n5J_TTXWj0",
   });
+
+  const Toast = ({ address }: { address: string }) => {
+    const shorterAddress = (string: string) => {
+      return string ? string.slice(0, 6) + "..." + string.substr(-4) : string;
+    };
+
+    return (
+      <p>
+        <AiFillExclamationCircle
+          style={{
+            color: "rgb(159, 159, 159)",
+            width: "20px",
+            height: "20px",
+            margin: "0",
+            marginRight: "5px",
+            position: "relative",
+            top: "1.5px",
+            float: "left",
+          }}
+        />
+        <b>{shorterAddress(address)}</b> has used Nimbus portfolio
+      </p>
+    );
+  };
 
   const [channel] = useChannel("address-sync", (message) => {
     toast(<Toast address={message.data} />, {
@@ -94,4 +94,5 @@ function ReactToast() {
 
 export const QReactToast = qwikify$(ReactToast, {
   eagerness: "visible",
+  clientOnly: true,
 });
