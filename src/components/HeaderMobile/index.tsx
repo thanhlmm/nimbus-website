@@ -31,6 +31,12 @@ export default component$((props: Props) => {
             <a href="https://nimbus.featurebase.app/" class="link">
               Feedback
             </a>
+            <a href="https://nimbus.featurebase.app/roadmap" class="link">
+              Roadmap
+            </a>
+            <a href="https://nimbus.featurebase.app/changelog" class="link">
+              Change Log
+            </a>
             {/* <div class="link">Transaction Explain</div> */}
             <a href="/blog" class="link">
               Blog
