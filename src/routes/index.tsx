@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import { QReactToast } from "~/integrations/toast";
+// import { QReactToast } from "~/integrations/toast";
 import Hero from "~/components/sections/Hero";
 import Problem from "~/components/sections/Problem";
 import Evolution from "~/components/sections/Evolution";
@@ -17,7 +17,7 @@ import SignUpForm from "~/components/SignUpForm";
 export default component$(() => {
   return (
     <>
-      <QReactToast />
+      {/* <QReactToast /> */}
       <Hero />
       <Problem />
       <Evolution />
