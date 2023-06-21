@@ -74,13 +74,26 @@ export default component$(() => {
             <img src={MenuBar} alt="menu" width={35} height={35} />
           </div>
           <div class="nav_links">
+            {" "}
             <a
               href="/"
               class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
             >
               Home
+            </a>{" "}
+            <a
+              href="https://nimbus.featurebase.app/roadmap"
+              class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
+            >
+              Roadmap
+            </a>{" "}
+            <a
+              href="https://nimbus.featurebase.app/changelog"
+              class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
+            >
+              Change Log
             </a>
-            {/* <div class="link">Transaction Explain</div> */}
+            {/* <div class="link">Transaction Explain</div> */ " "}
             <a
               href="/blog"
               class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
