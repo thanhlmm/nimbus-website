@@ -83,12 +83,14 @@ export default component$(() => {
             </a>{" "}
             <a
               href="https://nimbus.featurebase.app/roadmap"
+              target="_blank"
               class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
             >
               Roadmap
             </a>{" "}
             <a
               href="https://nimbus.featurebase.app/changelog"
+              target="_blank"
               class="link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all hover:after:w-full hover:after:left-0"
             >
               Change Log
