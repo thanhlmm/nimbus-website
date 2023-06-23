@@ -27,7 +27,7 @@ export default component$(() => {
               <Button text="Join Beta Test" />
             </a>
             <a
-              href="https://app.getnimbus.io/?address=0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+              href="https://app.getnimbus.io/?address=0x39d787fdf7384597c7208644dbb6fda1cca4ebdf"
               target="_blank"
               class="font-medium text-xl text-center link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all md:hover:after:w-full md:hover:after:left-0"
             >
