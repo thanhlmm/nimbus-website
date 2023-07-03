@@ -16,7 +16,7 @@ export default component$(() => {
         scrolling="no"
         marginHeight={0}
         marginWidth={0}
-        style="width: 100%;"
+        style="width: 100%; margin-top: 30px; padding-bottom: 30px"
       ></iframe>
     </div>
   );
