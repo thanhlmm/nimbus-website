@@ -47,7 +47,7 @@ export default component$(() => {
                   height={35}
                   class="rounded-full"
                 />
-                <div class="highlight">Web3 Spaced</div>
+                <div class="highlight">Web3 Space</div>
               </div>
             </div>
             <div class="flex flex-col gap-3">
