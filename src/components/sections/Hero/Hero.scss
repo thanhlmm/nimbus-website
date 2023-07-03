@@ -21,6 +21,21 @@
       text-transform: uppercase;
     }
 
+    .incubated_title {
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
+      font-weight: var(--qwik-fw-medium);
+      color: var(--qwik-black);
+      text-transform: uppercase;
+    }
+
+    .highlight {
+      font-size: var(--qwik-fs-xl);
+      line-height: var(--qwik-lh-xl);
+      font-weight: var(--qwik-fw-medium);
+      color: var(--qwik-black);
+    }
+
     .link {
       color: var(--qwik-black);
       cursor: pointer;

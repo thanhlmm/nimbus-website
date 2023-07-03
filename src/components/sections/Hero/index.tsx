@@ -35,23 +35,29 @@ export default component$(() => {
             </a>
           </div>
 
-          <div class="flex flex-col gap-3 mt-10">
-            <div class="title">Quality Data From</div>
-            <div class="flex items-center gap-8">
-              <img
-                src={CoinMarketCap}
-                alt="CoinMarketCap"
-                class="object-contain"
-                width={"40%"}
-                height={"40%"}
-              />
-              <img
-                src={BlockPI}
-                alt="BlockPI"
-                class="object-contain"
-                width={"25%"}
-                height={"25%"}
-              />
+          <div class="flex flex-col gap-4 mt-10">
+            <div class="flex items-center gap-2">
+              <div class="incubated_title">Incubated by</div>
+              <div class="highlight">Web3 Space</div>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="title">Quality Data From</div>
+              <div class="flex items-center gap-8">
+                <img
+                  src={CoinMarketCap}
+                  alt="CoinMarketCap"
+                  class="object-contain"
+                  width={"40%"}
+                  height={"40%"}
+                />
+                <img
+                  src={BlockPI}
+                  alt="BlockPI"
+                  class="object-contain"
+                  width={"25%"}
+                  height={"25%"}
+                />
+              </div>
             </div>
           </div>
         </div>
