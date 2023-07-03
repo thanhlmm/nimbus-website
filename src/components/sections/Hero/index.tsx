@@ -7,6 +7,7 @@ import Button from "~/components/Button";
 import Hero from "../../../assets/images/hero/hero.webp";
 import CoinMarketCap from "../../../assets/images/hero/coinmarketcap.svg";
 import BlockPI from "../../../assets/images/hero/blockPI.png";
+import Web3Space from "../../../assets/images/web3space.jpeg";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -38,7 +39,16 @@ export default component$(() => {
           <div class="flex flex-col gap-4 mt-10">
             <div class="flex items-center gap-2">
               <div class="incubated_title">Incubated by</div>
-              <div class="highlight">Web3 Space</div>
+              <div class="flex items-center gap-2">
+                <img
+                  src={Web3Space}
+                  alt="menu"
+                  width={35}
+                  height={35}
+                  class="rounded-full"
+                />
+                <div class="highlight">Web3 Spaced</div>
+              </div>
             </div>
             <div class="flex flex-col gap-3">
               <div class="title">Quality Data From</div>
