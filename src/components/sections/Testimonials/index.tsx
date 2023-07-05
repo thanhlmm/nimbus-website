@@ -3,6 +3,7 @@ import styles from "./Testimonials.scss?inline";
 
 import User from "../../../assets/images/user.svg";
 import Title from "~/components/Title";
+import { QReactTweet } from "~/integrations/tweet";
 
 export const testimonials = [
   {
@@ -63,7 +64,12 @@ export default component$(() => {
       <div class="flex justify-center lg:mb-16 mb-10">
         <Title title="Testimonials" />
       </div>
-      <div class="grid lg:grid-cols-3 grid-cols-1 gap-7">
+      <div class="flex justify-center items-center">
+        <div class="md:w-[400px] w-max">
+          <QReactTweet id="1676152442797400066" />
+        </div>
+      </div>
+      {/* <div class="grid lg:grid-cols-3 grid-cols-1 gap-7">
         <div class="flex flex-col gap-7">
           {testimonials.slice(0, 2).map((item, index) => {
             return (
@@ -133,7 +139,7 @@ export default component$(() => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 });
