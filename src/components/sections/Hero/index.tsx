@@ -30,7 +30,7 @@ export default component$(() => {
             <a
               href="https://app.getnimbus.io/?address=0x39d787fdf7384597c7208644dbb6fda1cca4ebdf"
               target="_blank"
-              class="font-medium text-xl text-center link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all md:hover:after:w-full md:hover:after:left-0"
+              class="font-medium xl:text-xl lg:text-lg text-xl text-center link after:content-[''] after:block after:bottom-[-4px] after:h-[2px] after:left-[50%] after:absolute after:bg-[#27326F] after:w-0 after:transition-all md:hover:after:w-full md:hover:after:left-0"
             >
               Try web version 🚀
             </a>
